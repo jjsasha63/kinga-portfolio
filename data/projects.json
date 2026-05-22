@@ -1,0 +1,448 @@
+[
+  {
+    "id": "kamienica",
+    "featured": true,
+    "badge_pl": "Wyróżniony projekt",
+    "badge_en": "Featured project",
+    "category_pl": "Architektura",
+    "category_en": "Architecture",
+    "title_pl": "Kamienica Grzegórzecka",
+    "title_en": "Grzegórzecka Tenement",
+    "subtitle_pl": "ul. Grzegórzecka 37, Kraków — Praca dyplomowa licencjacka, 2023",
+    "subtitle_en": "ul. Grzegórzecka 37, Kraków — Bachelor's Thesis, 2023",
+    "card_desc_pl": "Współczesna kamienica wpisana w historyczną zabudowę krakowskiej dzielnicy Grzegórzki.",
+    "card_desc_en": "A contemporary tenement integrated into the historic streetscape of Kraków's Grzegórzki district.",
+    "tags": [
+      "Praca dyplomowa",
+      "Kraków",
+      "Residential",
+      "Mixed-use",
+      "Brick + Glass"
+    ],
+    "thumb": "./kamienica/_img/p01_cropped.jpg",
+    "gradient": "linear-gradient(135deg, #2c1f17 0%, #4a2f1e 40%, #1a1410 100%)",
+    "story": [
+      {
+        "pl": "Praca dyplomowa licencjacka, Politechnika Krakowska 2023. Projekt zakłada narożną kamienicę przy ul. Grzegórzeckiej 37 — plombę wpisaną w historyczny rytm dzielnicy Grzegórzki. Cegła i pionowe żaluzje metalowe nawiązują do skali i materiałowości sąsiednich kamienic z przełomu XIX i XX w., zachowując jednocześnie wyraźnie współczesny wyraz.",
+        "en": "Bachelor's thesis, Cracow University of Technology 2023. The project proposes a corner tenement at ul. Grzegórzecka 37 — an infill building slotted into the historic rhythm of the Grzegórzki district. Brick and vertical metal fins reference the scale and materiality of neighbouring late-19th/early-20th-century buildings while maintaining a clearly contemporary expression.",
+        "img": "./kamienica/_img/p01_cropped.jpg"
+      },
+      {
+        "pl": "Kluczowym elementem koncepcji jest dziedziniec. Szklana ściana tylna celowo eksponuje istniejący mural na murze sąsiedniego budynku — czyniąc z niego żywy element wnętrza podwórkowego. Na dachu zaprojektowano ogród z pergolą dla mieszkańców. Parter zajmuje lokal gastronomiczny z geometryczną czarno-białą posadzką, ceglaną ścianą i zielenią zwisającą z sufitu.",
+        "en": "The courtyard is the conceptual centrepiece. The glazed rear façade deliberately frames the mural on the adjacent building's wall, turning it into a living element of the courtyard. A pergola garden for residents crowns the roof. The ground floor houses a café with geometric black-and-white tiles, exposed brick, and hanging greenery.",
+        "img": "./kamienica/_img2/interior_3.jpg"
+      },
+      {
+        "pl": "Dziedziniec i dach stanowią odrębne przestrzenie — ogród na dachu z pergolą dla mieszkańców, szklana tylna elewacja celowo eksponująca mural sąsiedniego budynku jako żywy element wnętrza podwórkowego. Bryła narożna zachowuje pierzeje ulic, a jednocześnie tworzy intymną kieszeń zieleni w głębi kwartału.",
+        "en": "The courtyard and rooftop form distinct spaces — a pergola garden for residents above, and a glazed rear façade that deliberately frames the neighbouring building's mural as a living courtyard element. The corner volume maintains the street frontages while carving out an intimate green pocket within the block.",
+        "img": "./kamienica/_img2/interior_5.jpg"
+      },
+      {
+        "imgs": [
+          "./kamienica/_img2/interior_4.jpg",
+          "./kamienica/_img2/plans_p3_4.jpg",
+          "./kamienica/_img2/plans_p3_5.jpg",
+          "./kamienica/_img2/plans_p3_6.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bezdomni",
+    "featured": true,
+    "badge_pl": "Praca magisterska",
+    "badge_en": "Master's thesis",
+    "category_pl": "Architektura użyteczności publicznej",
+    "category_en": "Public Architecture",
+    "title_pl": "Dom dla Bezdomnych",
+    "title_en": "Shelter for the Homeless",
+    "subtitle_pl": "ul. Grzegórzecka 32, Kraków — Praca dyplomowa magisterska, 2024",
+    "subtitle_en": "ul. Grzegórzecka 32, Kraków — Master's Thesis, 2024",
+    "card_desc_pl": "Schronisko dla bezdomnych mężczyzn — humanistyczna architektura w sercu Krakowa.",
+    "card_desc_en": "A shelter for homeless men — humanist architecture in the heart of Kraków.",
+    "tags": [
+      "Praca magisterska",
+      "2531 m²",
+      "Kraków",
+      "Sustainable",
+      "Social architecture"
+    ],
+    "thumb": "./praca magisterska/_img2/embedded_1.jpg",
+    "gradient": "linear-gradient(135deg, #1a2a1a 0%, #243524 40%, #0f180f 100%)",
+    "story": [
+      {
+        "pl": "Praca dyplomowa magisterska obroniona w 2024 roku na Politechnice Krakowskiej. Działka przy ul. Grzegórzeckiej 32 — w pobliżu Ronda Grzegórzeckiego, na terenie przez lata zdegradowanym, pozbawionym wartościowej zabudowy. Projekt odpowiada na realną potrzebę społeczną: schronisko dla bezdomnych mężczyzn oferujące godne warunki pobytu i program terapeutyczny.",
+        "en": "Master's thesis defended in 2024 at Cracow University of Technology. The site at ul. Grzegórzecka 32 — near Grzegórzecki Roundabout, on land long degraded and lacking quality buildings. The project addresses a real social need: a shelter for homeless men offering dignified living conditions and a therapeutic programme.",
+        "img": "./praca magisterska/_img2/embedded_1.jpg"
+      },
+      {
+        "pl": "Budynek dwukondygnacyjny o pow. użytkowej 2531 m² zorganizowany wokół wewnętrznego dziedzińca — serca całego założenia, pełniącego funkcję przestrzeni wspólnej, terapeutycznej i integracyjnej. Parter: recepcja, gabinety medyczne, kuchnia społeczna, kaplica, pracownie warsztatowe, sale terapii, biblioteka. Piętro: pokoje mieszkalne (1-, 4- i 6-osobowe) i dodatkowe pracownie.",
+        "en": "The two-storey building (2,531 m² usable area) is organised around an inner courtyard — the heart of the scheme, serving as communal, therapeutic and integration space. Ground floor: reception, medical rooms, social kitchen, chapel, craft workshops, therapy rooms and library. First floor: residential rooms (1-, 4- and 6-person) and additional workshops.",
+        "img": "./praca magisterska/_img2/board_bot.jpg"
+      },
+      {
+        "pl": "Projekt wyróżnia dbałość o zrównoważone rozwiązania: zielony dach, kolektory słoneczne, wertykalny ogród fasadowy oraz staw retencyjny. Elewacja zestawia okładzinę drewnianą, kamień i białe żaluzje — spokojny, godny wyraz architektoniczny adekwatny do programu społecznego.",
+        "en": "The project stands out for its sustainable solutions: a green roof, solar collectors, a vertical façade garden and a retention pond. The façade combines timber cladding, stone and white louvres — a calm, dignified architectural expression suited to the social programme."
+      },
+      {
+        "imgs": [
+          "./praca magisterska/_img/p01_cropped.jpg",
+          "./praca magisterska/_img2/embedded_1.jpg",
+          "./praca magisterska/_img2/board_top.jpg",
+          "./praca magisterska/_img2/board_bot.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gardenhouse",
+    "featured": false,
+    "category_pl": "Architektura rezydencjonalna",
+    "category_en": "Residential Architecture",
+    "title_pl": "Garden House",
+    "title_en": "Garden House",
+    "subtitle_pl": "Krowodrza, Kraków — Projekt akademicki, PK 2020/2021",
+    "subtitle_en": "Krowodrza, Kraków — Academic project, CUT 2020/2021",
+    "card_desc_pl": "Dom jednorodzinny zintegrowany z naturą — zrównoważona architektura z ogrodem i stawem retencyjnym.",
+    "card_desc_en": "A single-family house integrated with nature — sustainable architecture with garden and retention pond.",
+    "tags": [
+      "Residential",
+      "Single-family",
+      "Zrównoważony",
+      "Indoor-outdoor",
+      "BMS"
+    ],
+    "thumb": "./garden house/_img2/viz1_ext1.jpg",
+    "gradient": "linear-gradient(135deg, #151f15 0%, #1e2e1e 40%, #0c140c 100%)",
+    "story": [
+      {
+        "pl": "Dom jednorodzinny na Krowodrzy, Kraków — projekt akademicki, Politechnika Krakowska 2020/2021. Wiodącą ideą była minimalizacja śladu węglowego: konstrukcja z bloczków silikatowych, pompa ciepła, wentylacja mechaniczna z rekuperatorem, odwodnienie wewnętrzne, system BMS. Czysta horyzontalna bryła otwiera się widokowo na południe — na ogród i naturalny staw retencyjny.",
+        "en": "Single-family house in Krowodrza, Kraków — academic project, Cracow University of Technology 2020/2021. The leading concept: minimising the carbon footprint via silicate block construction, heat pump, mechanical ventilation with heat recovery, internal drainage and a BMS system. The clean horizontal volume opens southward onto the garden and natural retention pond.",
+        "img": "./garden house/_img2/viz1_ext1.jpg"
+      },
+      {
+        "pl": "Wnętrza zaprojektowane w estetyce japandi — drewno, beton architektoniczny, marmurowe posadzki, pełnościenne przeszklenia łączące salon z tarasem. Salon z aneksem kuchennym i biblioteka ze ścianą regałów otwierają się na zieleń — granica między wnętrzem a ogrodem celowo się zaciera.",
+        "en": "The interiors follow a japandi aesthetic — timber, exposed concrete, marble floors and full-height glazing connecting the living space to the terrace. The open-plan living/kitchen and the full-shelving library both open onto the greenery — the boundary between inside and garden is deliberately dissolved.",
+        "img": "./garden house/_img2/viz2_int1.jpg"
+      },
+      {
+        "pl": "Taras z pergolą drewnianą tworzy przedłużenie salonu — przestrzeń wypoczynku ukryta za pionowymi lamellami. Projekt obejmuje pełną dokumentację wykonawczą: rzuty 1:100 i 1:50, elewacje, przekroje, instalacje oraz odręczne szkice koncepcyjne.",
+        "en": "The timber pergola terrace extends the living room — a retreat screened by vertical fins. Full construction documentation: plans at 1:100 and 1:50, elevations, sections, services and freehand concept sketches.",
+        "img": "./garden house/_img2/viz2_int2.jpg"
+      },
+      {
+        "imgs": [
+          "./garden house/_img2/viz1_ext2.jpg",
+          "./garden house/_img2/viz1_ext3.jpg",
+          "./garden house/_img2/viz1_1.jpg",
+          "./garden house/_img2/viz2_int3.jpg",
+          "./garden house/_img2/viz2_1.jpg",
+          "./garden house/_img2/elevations_2.jpg",
+          "./garden house/_img2/site_4.jpg",
+          "./garden house/_img2/gf_plan_3.jpg",
+          "./garden house/_img2/sections_2.jpg",
+          "./garden house/_img2/sections_5.jpg",
+          "./garden house/_img2/sections_8.jpg",
+          "./garden house/_img2/concept_3.jpg",
+          "./garden house/_img2/handsketch_1.jpg",
+          "./garden house/_img2/handsketch_2.jpg",
+          "./garden house/_img2/handsketch_3.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "drezno",
+    "featured": false,
+    "category_pl": "Architektura mieszkaniowa",
+    "category_en": "Residential Architecture",
+    "title_pl": "Kompleks Mieszkalny nad Wodą — Drezno",
+    "title_en": "Waterfront Residential Complex — Dresden",
+    "subtitle_pl": "Drezno, Niemcy — Projektowanie Zespołu Budynków Mieszkalnych, PK Rok I Sem. II, 2023/24",
+    "subtitle_en": "Dresden, Germany — Residential Complex Design, CUT Year I Sem. II, 2023/24",
+    "card_desc_pl": "Zespół budynków mieszkalnych nad wodą w Dreźnie — architektura nadwodna z mariną i zapleczem kulturalnym.",
+    "card_desc_en": "Waterfront residential complex in Dresden — architecture above water with a marina and cultural facilities.",
+    "tags": [
+      "Projekt akademicki",
+      "Zabudowa śródmiejska",
+      "Waterfront",
+      "Mixed-use",
+      "Lumion",
+      "Praca zespołowa"
+    ],
+    "thumb": "./drezno/2.jpg",
+    "gradient": "linear-gradient(135deg, #0d1e2a 0%, #142030 40%, #081218 100%)",
+    "story": [
+      {
+        "pl": "Projekt zespołu budynków mieszkalnych w zabudowie śródmiejskiej Drezna — praca akademicka, Politechnika Krakowska (Rok I, Semestr II, 2023/2024), prowadzący: dr hab. inż. arch. Kinga Racoń-Leja, prof. PK i dr inż. arch. Ernestyna Szpakowska-Loranc. Projekt grupowy: Kinga Trojan, Justyna Żak.",
+        "en": "A residential complex project for an inner-city waterfront site in Dresden — academic work, Cracow University of Technology (Year I, Semester II, 2023/24), supervised by dr hab. inż. arch. Kinga Racoń-Leja, prof. CUT, and dr inż. arch. Ernestyna Szpakowska-Loranc. Group project: Kinga Trojan, Justyna Żak.",
+        "img": "./drezno/2.jpg"
+      },
+      {
+        "pl": "Główny budynek mieszkalny wykracza poza linię brzegową — dolna kondygnacja wspiera się na słupach wprost nad wodą, umożliwiając cumowanie łodzi bezpośrednio pod budynkiem. Materiały: drewno, biały beton i pełnościenne przeszklenia balkonów eksponujące panoramę rzeki.",
+        "en": "The main residential building extends beyond the shoreline — the lower level rests on pilotis directly above the water, allowing boats to moor beneath the building. Materials: timber, white concrete and full-height glazed balconies framing river panoramas.",
+        "img": "./drezno/3.jpg"
+      },
+      {
+        "pl": "Cztery elewacje 1:200 dokumentują logikę kompozycji: rytmiczne podziały balkonów, przeplatanie drewna z białym betonem oraz przeszklone poziomy parterowe otwierające budynek na nabrzeże. Projekt realizowany wspólnie z Justyną Żak.",
+        "en": "Four elevations at 1:200 reveal the compositional logic: rhythmic balcony bays, the interplay of timber and white concrete, and glazed ground-floor levels that open the building to the waterfront. Project realised together with Justyna Żak.",
+        "img": "./drezno/elevations_0.jpg"
+      },
+      {
+        "imgs": [
+          "./drezno/4.jpg",
+          "./drezno/1.jpg",
+          "./drezno/rzuty_0.jpg",
+          "./drezno/plan_1500_0.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "motel",
+    "featured": true,
+    "category_pl": "Architektura komercyjna",
+    "category_en": "Commercial Architecture",
+    "title_pl": "Projekt Motelu",
+    "title_en": "Motel Project",
+    "subtitle_pl": "Nowy Targ — Architektura Współczesnego Regionalizmu, PK Rok III",
+    "subtitle_en": "Nowy Targ — Contemporary Regionalism, CUT Year III",
+    "card_desc_pl": "Motel w krajobrazie Podhala — regionalizm, zielone dachy i spa z krytym basenem.",
+    "card_desc_en": "A motel in the Podhale landscape — regionalism, green roofs and a spa with indoor pool.",
+    "tags": [
+      "Hospitality",
+      "Podhale",
+      "Projekt akademicki",
+      "Regionalizm",
+      "SPA"
+    ],
+    "thumb": "./motel/_img2/views_4.jpg",
+    "gradient": "linear-gradient(135deg, #1f1a10 0%, #2e2516 40%, #141008 100%)",
+    "story": [
+      {
+        "pl": "Motel w Nowym Targu — projekt akademicki, Politechnika Krakowska, Rok III, Zespół Architektury Współczesnego Regionalizmu. Obiekt osadzony w podhalańskim krajobrazie: niskie poziome bryły wtopione w rozległą zieleń, zielone dachy integrujące budynek z terenem. Elewacje łączą cegłę, tynk i czarną stal — materiały nawiązujące do regionalnej tradycji budowlanej.",
+        "en": "Motel in Nowy Targ — academic project, Cracow University of Technology, Year III, Contemporary Regionalism studio. The building is embedded in the Podhale landscape: low horizontal volumes nestled in open greenery, green roofs integrating the building with the terrain. Façades combine brick, render and black steel — materials referencing regional building tradition.",
+        "img": "./motel/_img2/views_4.jpg"
+      },
+      {
+        "pl": "Strefa SPA z krytym basenem stanowi serce obiektu — basen otoczony panoramicznym przeszkleniem, zielona ściana, terrazzo, subtelne neonowe akcenty. Ponadto: recepcja, restauracja i pokoje gościnne ze spokojnym, eleganckimi wykończeniem.",
+        "en": "The indoor SPA with pool is the heart of the building — surrounded by panoramic glazing, a green feature wall, terrazzo floors and subtle neon accents. Also: reception, restaurant and guest rooms with calm, elegant finishes.",
+        "img": "./motel/_img2/details_1.jpg"
+      },
+      {
+        "pl": "Bryła rozkłada się poziomo wzdłuż działki, akcentując panoramę Tatr. Dokumentacja: rzut parteru 1:200, rzut I piętra, elewacje z widokiem na wzgórze, przekroje i pełen pakiet wizualizacji Lumion.",
+        "en": "The massing stretches horizontally along the plot, framing the Tatra panorama. Documentation: ground floor plan 1:200, first floor plan, elevations set against the hillside, sections and full Lumion visualisation package.",
+        "img": "./motel/_img2/elevations_1.jpg"
+      },
+      {
+        "imgs": [
+          "./motel/_img2/views_1.jpg",
+          "./motel/_img2/views_2.jpg",
+          "./motel/_img2/views_3.jpg",
+          "./motel/_img2/details_2.jpg",
+          "./motel/_img2/details_3.jpg",
+          "./motel/_img2/details_4.jpg",
+          "./motel/_img2/details_5.jpg",
+          "./motel/_img2/details_6.jpg",
+          "./motel/_img2/elevations_2.jpg",
+          "./motel/_img2/elevations_3.jpg",
+          "./motel/_img2/sections_1.jpg",
+          "./motel/_img2/sections_2.jpg",
+          "./motel/_img2/sections_3.jpg",
+          "./motel/_img2/sections_4.jpg",
+          "./motel/_img2/sections_5.jpg",
+          "./motel/_img2/context_1.jpg",
+          "./motel/_img2/context_2.jpg",
+          "./motel/_img2/context_3.jpg",
+          "./motel/_img2/cover_2.jpg",
+          "./motel/_img2/cover_3.jpg",
+          "./motel/_img2/cover_4.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "konserwatorskie",
+    "featured": false,
+    "category_pl": "Projektowanie konserwatorskie",
+    "category_en": "Conservation Design",
+    "title_pl": "Przebudowa Dawnej Fabryki Tytoniu",
+    "title_en": "Conversion of Former Tobacco Factory",
+    "subtitle_pl": "ul. Dolnych Młynów 10, Kraków — obiekt wpisany do rejestru zabytków A-1437/M",
+    "subtitle_en": "ul. Dolnych Młynów 10, Kraków — listed building, heritage register A-1437/M",
+    "card_desc_pl": "Adaptacja historycznego budynku c.k. Fabryki Tytoniowo-Cygarowej na centrum biurowo-artystyczne.",
+    "card_desc_en": "Adaptive reuse of the historic Imperial and Royal Tobacco Factory as a business and arts centre.",
+    "tags": [
+      "Konserwacja",
+      "1405 m²",
+      "Heritage",
+      "Adaptive reuse",
+      "Kraków",
+      "UNESCO buffer zone"
+    ],
+    "thumb": "./projektowanie konsw/_img2/board_p20_1.jpg",
+    "gradient": "linear-gradient(135deg, #201810 0%, #332618 40%, #160f08 100%)",
+    "story": [
+      {
+        "pl": "Adaptacja dawnej Cesarsko-Królewskiej Fabryki Tytoniowo-Cygarowej przy ul. Dolnych Młynów 10, Kraków — obiekt wpisany do rejestru zabytków (A-1437/M), strefa buforowa UNESCO. Projekt dyplomowy, Katedra Historii Architektury i Konserwacji Zabytków PK, rok ak. 2023/2024.",
+        "en": "Adaptive reuse of the former Imperial and Royal Tobacco and Cigar Factory at ul. Dolnych Młynów 10, Kraków — listed building (A-1437/M), UNESCO buffer zone. Diploma project, Department of Architectural History and Heritage Conservation, CUT, academic year 2023/2024.",
+        "img": "./projektowanie konsw/_img2/p18_render.jpg"
+      },
+      {
+        "pl": "Nowa funkcja: biuro architektoniczne z pracowniami modelarskimi, salami szkoleniowymi, strefą relaksu i sklepem artystycznym. Wnętrza w jasnej, eleganckiej kolorystyce: biele, jasne drewno, delikatny róż — celowy kontrast z surową historyczną tkanką budynku.",
+        "en": "New function: an architecture studio with modelling workshops, training rooms, a relaxation zone and an art shop. Interiors designed in a light, elegant palette — whites, pale timber, soft rose — in deliberate contrast to the building's raw historic fabric.",
+        "img": "./projektowanie konsw/_img2/p19_renders.jpg"
+      },
+      {
+        "pl": "Elewacja zachowana w oryginalnej barwie ochrowo-różowej. Projekt obejmuje: analizę zrównoważonego zagospodarowania terenu, rzuty wszystkich kondygnacji 1:100, cztery elewacje 1:100 oraz program konserwatorski z wnioskami technicznymi.",
+        "en": "The façade is preserved in its original ochre-rose colour. The project includes: sustainable site analysis, floor plans at 1:100, all four elevations at 1:100, and a conservation programme with structural recommendations.",
+        "img": "./projektowanie konsw/_img2/board_p20_1.jpg"
+      },
+      {
+        "imgs": [
+          "./projektowanie konsw/_img2/board_p16_1.jpg",
+          "./projektowanie konsw/_img2/board_p17_1.jpg",
+          "./projektowanie konsw/_img2/board_p18_1.jpg",
+          "./projektowanie konsw/_img2/board_p19_1.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mojdom",
+    "featured": false,
+    "category_pl": "Projektowanie wnętrz",
+    "category_en": "Interior Design",
+    "title_pl": "Mój Dom — Projekt Wnętrz",
+    "title_en": "My Home — Interior Design",
+    "subtitle_pl": "Projekt autorski — kompleksowa aranżacja domu z realizacją",
+    "subtitle_en": "Personal project — full interior design from concept to completion",
+    "card_desc_pl": "Kompleksowy projekt wnętrz własnego domu — od koncepcji po gotową realizację.",
+    "card_desc_en": "A complete interior design of own home — from concept to finished execution.",
+    "tags": [
+      "Wnętrza",
+      "Realizacja",
+      "Projekt autorski",
+      "LED",
+      "Jodełka dębowa"
+    ],
+    "thumb": "./moj dom/PHOTO-2026-05-20-11-22-22.jpg",
+    "gradient": "linear-gradient(135deg, #1a1520 0%, #2a1f35 40%, #100d18 100%)",
+    "video": "./moj dom/VIDEO-2026-05-20-11-23-23.mp4",
+    "story": [
+      {
+        "pl": "Projekt kompleksowej aranżacji wnętrz własnego domu — od opracowania koncepcji, przez dobór materiałów i mebli, po finalną realizację. Dokumentuje pełen proces: plany funkcjonalne każdego pomieszczenia i fotografię wnętrz po realizacji.",
+        "en": "A comprehensive interior design of the designer's own home — from concept development, through material and furniture selection, to final execution. Documents the full process: functional plans for each room and interior photography after completion.",
+        "img": "./moj dom/PHOTO-2026-05-20-11-19-13.jpg"
+      },
+      {
+        "pl": "Otwarta przestrzeń dzienna łącząca salon, jadalnię i kuchnię zaprojektowana wokół kilku kluczowych elementów: jodełka dębowa na podłodze, dekoracyjne pilastry z taśmą LED, drewniany mebel RTV na ściance telewizyjnej w kolorze szarego betonu. Okrągłe lustro optycznie pogłębia przestrzeń i odbija naturalne światło.",
+        "en": "The open-plan living/dining/kitchen is designed around a few key signature elements: oak herringbone flooring, decorative LED-lit pilasters, a timber floating TV unit against a grey concrete-toned feature wall. A circular mirror optically deepens the space and bounces natural light.",
+        "img": "./moj dom/PHOTO-2026-05-20-11-22-22.jpg"
+      },
+      {
+        "pl": "Klatka schodowa z dębowymi stopniami, białymi pionowymi tralkami i taśmą LED wmontowaną w wnękę sufitową — detal łączący funkcję z estetyką. Hol wejściowy z lustrem LED i drewnianymi schodami widocznymi przez szklaną balustradę. Projekt stanowi praktyczny dowód prowadzenia inwestycji od koncepcji po klucze w drzwiach.",
+        "en": "The oak staircase with white vertical balusters and LED cove lighting built into the ceiling recess — a detail uniting function and aesthetics. The entrance hall with an LED mirror and wooden stairs visible through the glass balustrade. This project is a practical demonstration of managing an interior from concept right through to handover.",
+        "img": "./moj dom/PHOTO-2026-05-20-11-23-13.jpg"
+      },
+      {
+        "imgs": [
+          "./moj dom/PHOTO-2026-05-20-11-19-14.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-17.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-20.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-22.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-24.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-38.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-40.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-41.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-42.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-43.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-44.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-45.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-46.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-47.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-19-48.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-36.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-37.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-39.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-40.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-42.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-43.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-45.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-46.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-47.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-48.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-50.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-51.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-52.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-54.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-58.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-22-59.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-00.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-02.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-03.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-05.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-06.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-08.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-09.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-11.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-14.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-15.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-17.jpg",
+          "./moj dom/PHOTO-2026-05-20-11-23-20.jpg",
+          "./moj dom/lazienka_0.jpg",
+          "./moj dom/lazienka_1.jpg",
+          "./moj dom/lazienka_2.jpg",
+          "./moj dom/sypialnia_0.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pszczoly",
+    "featured": true,
+    "category_pl": "Architektura & Projektowanie wnętrz",
+    "category_en": "Architecture & Interior Design",
+    "title_pl": "Wieś Pszczoły — Gospodarstwo Pasieczne",
+    "title_en": "Bee Village — Beekeeping Farm",
+    "subtitle_pl": "Piekary, gm. Liszki, Małopolska — Architektura Wsi i Planowanie Przestrzenne, PK 2022/23",
+    "subtitle_en": "Piekary, Liszki commune, Małopolska — Architecture of Rural Areas, CUT 2022/23",
+    "card_desc_pl": "Kompleks pasieczny dla trzech pokoleń — mieszkanie, pracownia miodarska i pasieka dla 54 uli.",
+    "card_desc_en": "A three-generation beekeeping complex — residence, honey studio and apiary for 54 hives.",
+    "tags": [
+      "Rural",
+      "Multi-gen",
+      "320 m² + 286 m²",
+      "Timber",
+      "Małopolska",
+      "Wnętrza"
+    ],
+    "thumb": "./wies pszczoły/PHOTO-2026-05-20-11-23-53.jpg",
+    "gradient": "linear-gradient(135deg, #1a1a0d 0%, #2a2a12 40%, #111108 100%)",
+    "story": [
+      {
+        "pl": "Projekt planowania przestrzennego wsi Piekary w gminie Liszki (Małopolska) zrealizowany w ramach przedmiotu Architektura Wsi i Planowanie Przestrzenne na PK (2022/23). Projekt obejmuje program kilku obiektów dla całej wsi — od zabudowy mieszkaniowej po budynki publiczne i gospodarcze — oraz kompleksową dokumentację architektoniczną.",
+        "en": "A spatial planning project for the village of Piekary, Liszki commune (Małopolska), developed for the Architecture of Rural Areas and Spatial Planning course at CUT (2022/23). The project covers a programme of several buildings for the whole village — from residential to public and farm buildings — with complete architectural documentation.",
+        "img": "./wies pszczoły/PHOTO-2026-05-20-11-23-52.jpg"
+      },
+      {
+        "pl": "Gospodarstwo pasieczne składa się z domu mieszkalnego dla trzech pokoleń (320 m²), budynku pracowni pszczelarskiej ze sklepem miodarskim i dwiema salami szkoleniowymi (286 m²) oraz pasieki na 54 ule. Materiały nawiązują do lokalnej tradycji: okładzina świerkowa, dach z blachy antracytowej, kamień dekoracyjny.",
+        "en": "The beekeeping farm comprises a three-generation house (320 m²), a honey studio with shop and two training rooms (286 m²), and an apiary for 54 hives. Materials echo local tradition: spruce cladding, anthracite metal roof, decorative stone.",
+        "img": "./wies pszczoły/PHOTO-2026-05-20-11-23-53.jpg"
+      },
+      {
+        "pl": "Program wsi obejmuje również obiekt kulturalno-usługowy z żywą ścianą i zielonym dachem — centrum życia społecznego wsi, korespondujące materiałowo z ceglastą zabudową historyczną Małopolski.",
+        "en": "The village programme also includes a cultural and service building with a living wall and green roof — the social heart of the village, responding materially to the brick vernacular of historic Małopolska.",
+        "img": "./wies pszczoły/PHOTO-2026-05-20-11-23-36.jpg"
+      },
+      {
+        "imgs": [
+          "./wies pszczoły/PHOTO-2026-05-20-11-23-49.jpg",
+          "./wies pszczoły/PHOTO-2026-05-20-11-23-50.jpg",
+          "./wies pszczoły/PHOTO-2026-05-20-11-23-51.jpg",
+          "./wies pszczoły/lumion_farmhouse.jpg"
+        ]
+      }
+    ]
+  }
+]
