@@ -1,0 +1,47 @@
+{
+  "id": "pszczoly",
+  "featured": true,
+  "category_pl": "Architektura & Projektowanie wnętrz",
+  "category_en": "Architecture & Interior Design",
+  "title_pl": "Wieś Pszczoły — Gospodarstwo Pasieczne",
+  "title_en": "Bee Village — Beekeeping Farm",
+  "subtitle_pl": "Piekary, gm. Liszki, Małopolska — Architektura Wsi i Planowanie Przestrzenne, PK 2022/23",
+  "subtitle_en": "Piekary, Liszki commune, Małopolska — Architecture of Rural Areas, CUT 2022/23",
+  "card_desc_pl": "Kompleks pasieczny dla trzech pokoleń — mieszkanie, pracownia miodarska i pasieka dla 54 uli.",
+  "card_desc_en": "A three-generation beekeeping complex — residence, honey studio and apiary for 54 hives.",
+  "tags": [
+    "Rural",
+    "Multi-gen",
+    "320 m² + 286 m²",
+    "Timber",
+    "Małopolska",
+    "Wnętrza"
+  ],
+  "thumb": "./wies pszczoły/PHOTO-2026-05-20-11-23-53.jpg",
+  "gradient": "linear-gradient(135deg, #1a1a0d 0%, #2a2a12 40%, #111108 100%)",
+  "story": [
+    {
+      "pl": "Projekt planowania przestrzennego wsi Piekary w gminie Liszki (Małopolska) zrealizowany w ramach przedmiotu Architektura Wsi i Planowanie Przestrzenne na PK (2022/23). Projekt obejmuje program kilku obiektów dla całej wsi — od zabudowy mieszkaniowej po budynki publiczne i gospodarcze — oraz kompleksową dokumentację architektoniczną.",
+      "en": "A spatial planning project for the village of Piekary, Liszki commune (Małopolska), developed for the Architecture of Rural Areas and Spatial Planning course at CUT (2022/23). The project covers a programme of several buildings for the whole village — from residential to public and farm buildings — with complete architectural documentation.",
+      "img": "./wies pszczoły/PHOTO-2026-05-20-11-23-52.jpg"
+    },
+    {
+      "pl": "Gospodarstwo pasieczne składa się z domu mieszkalnego dla trzech pokoleń (320 m²), budynku pracowni pszczelarskiej ze sklepem miodarskim i dwiema salami szkoleniowymi (286 m²) oraz pasieki na 54 ule. Materiały nawiązują do lokalnej tradycji: okładzina świerkowa, dach z blachy antracytowej, kamień dekoracyjny.",
+      "en": "The beekeeping farm comprises a three-generation house (320 m²), a honey studio with shop and two training rooms (286 m²), and an apiary for 54 hives. Materials echo local tradition: spruce cladding, anthracite metal roof, decorative stone.",
+      "img": "./wies pszczoły/PHOTO-2026-05-20-11-23-53.jpg"
+    },
+    {
+      "pl": "Program wsi obejmuje również obiekt kulturalno-usługowy z żywą ścianą i zielonym dachem — centrum życia społecznego wsi, korespondujące materiałowo z ceglastą zabudową historyczną Małopolski.",
+      "en": "The village programme also includes a cultural and service building with a living wall and green roof — the social heart of the village, responding materially to the brick vernacular of historic Małopolska.",
+      "img": "./wies pszczoły/PHOTO-2026-05-20-11-23-36.jpg"
+    },
+    {
+      "imgs": [
+        "./wies pszczoły/PHOTO-2026-05-20-11-23-49.jpg",
+        "./wies pszczoły/PHOTO-2026-05-20-11-23-50.jpg",
+        "./wies pszczoły/PHOTO-2026-05-20-11-23-51.jpg",
+        "./wies pszczoły/lumion_farmhouse.jpg"
+      ]
+    }
+  ]
+}

@@ -6,121 +6,129 @@ media_folder: "uploads"
 public_folder: "uploads"
 
 collections:
+
+  # ── PROJECTS (one file per project) ──────────────────────────
   - name: "projects"
     label: "Projects"
-    files:
-      - label: "All Projects"
-        name: "all_projects"
-        file: "data/projects.json"
+    label_singular: "Project"
+    folder: "data/projects"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    identifier_field: "title_pl"
+    summary: "{{title_pl}}"
+    fields:
+
+      - label: "ID (unique, no spaces)"
+        name: id
+        widget: string
+        hint: "e.g. my-new-project — used as filename, don't change after creation"
+
+      - label: "Featured?"
+        name: featured
+        widget: boolean
+        default: false
+
+      - label: "Badge (PL)"
+        name: badge_pl
+        widget: string
+        required: false
+        hint: "e.g. Wyróżniony projekt — leave blank for none"
+
+      - label: "Badge (EN)"
+        name: badge_en
+        widget: string
+        required: false
+
+      - label: "Category (PL)"
+        name: category_pl
+        widget: string
+
+      - label: "Category (EN)"
+        name: category_en
+        widget: string
+
+      - label: "Title (PL)"
+        name: title_pl
+        widget: string
+
+      - label: "Title (EN)"
+        name: title_en
+        widget: string
+
+      - label: "Subtitle (PL)"
+        name: subtitle_pl
+        widget: string
+
+      - label: "Subtitle (EN)"
+        name: subtitle_en
+        widget: string
+
+      - label: "Card description (PL)"
+        name: card_desc_pl
+        widget: text
+
+      - label: "Card description (EN)"
+        name: card_desc_en
+        widget: text
+
+      - label: "Tags"
+        name: tags
+        widget: list
+        field:
+          label: Tag
+          name: tag
+          widget: string
+
+      - label: "Thumbnail image"
+        name: thumb
+        widget: image
+
+      - label: "Video (optional)"
+        name: video
+        widget: file
+        required: false
+
+      - label: "Story blocks"
+        name: story
+        widget: list
+        hint: "Each block = text paragraph + optional image. Last block can be gallery-only."
         fields:
-          - label: "Projects"
-            name: projects
+          - label: "Text (PL)"
+            name: pl
+            widget: text
+            required: false
+          - label: "Text (EN)"
+            name: en
+            widget: text
+            required: false
+          - label: "Image (alongside text)"
+            name: img
+            widget: image
+            required: false
+          - label: "Gallery images"
+            name: imgs
             widget: list
-            summary: "{{fields.title_pl}}"
-            fields:
-              - label: "ID (no spaces, e.g. my-project)"
-                name: id
-                widget: string
+            required: false
+            field:
+              label: Image
+              name: image
+              widget: image
 
-              - label: "Featured project?"
-                name: featured
-                widget: boolean
-                default: false
-
-              - label: "Badge label (PL)"
-                name: badge_pl
-                widget: string
-                required: false
-                hint: "e.g. Wyróżniony projekt — leave blank if none"
-
-              - label: "Badge label (EN)"
-                name: badge_en
-                widget: string
-                required: false
-
-              - label: "Category (PL)"
-                name: category_pl
-                widget: string
-                hint: "e.g. Projektowanie wnętrz"
-
-              - label: "Category (EN)"
-                name: category_en
-                widget: string
-                hint: "e.g. Interior Design"
-
-              - label: "Title (PL)"
-                name: title_pl
-                widget: string
-
-              - label: "Title (EN)"
-                name: title_en
-                widget: string
-
-              - label: "Subtitle / location (PL)"
-                name: subtitle_pl
-                widget: string
-                hint: "e.g. Kraków — Projekt wnętrz, 2024"
-
-              - label: "Subtitle / location (EN)"
-                name: subtitle_en
-                widget: string
-
-              - label: "Short description (PL)"
-                name: card_desc_pl
-                widget: text
-                hint: "1–2 sentences shown on the project card"
-
-              - label: "Short description (EN)"
-                name: card_desc_en
-                widget: text
-
-              - label: "Tags"
-                name: tags
-                widget: list
-                hint: "Short labels, e.g. Residential, Kraków, 2024"
-                field:
-                  label: Tag
-                  name: tag
-                  widget: string
-
-              - label: "Thumbnail image"
-                name: thumb
-                widget: image
-                hint: "Main image shown in the project list"
-
-              - label: "Video (optional)"
-                name: video
-                widget: file
-                required: false
-                hint: "Upload an .mp4 walkthrough video"
-
-              - label: "Story blocks"
-                name: story
-                widget: list
-                hint: "Each block is a text paragraph paired with an optional image. Add a final block with only gallery images for the thumbnail strip."
-                fields:
-                  - label: "Text (PL)"
-                    name: pl
-                    widget: text
-                    required: false
-
-                  - label: "Text (EN)"
-                    name: en
-                    widget: text
-                    required: false
-
-                  - label: "Single image (alongside text)"
-                    name: img
-                    widget: image
-                    required: false
-                    hint: "Leave empty for a gallery-only block"
-
-                  - label: "Gallery images (multiple)"
-                    name: imgs
-                    widget: list
-                    required: false
-                    hint: "Add multiple images here for the scrollable strip"
-                    field:
-                      label: Image
-                      name: image
-                      widget: image
+  # ── PROJECT ORDER ─────────────────────────────────────────────
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Project display order"
+        name: "order"
+        file: "data/order.json"
+        fields:
+          - label: "Project IDs in display order"
+            name: order
+            widget: list
+            hint: "Drag to reorder. Each value must match a project's ID exactly."
+            field:
+              label: Project ID
+              name: id
+              widget: string

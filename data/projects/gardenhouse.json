@@ -1,0 +1,57 @@
+{
+  "id": "gardenhouse",
+  "featured": false,
+  "category_pl": "Architektura rezydencjonalna",
+  "category_en": "Residential Architecture",
+  "title_pl": "Garden House",
+  "title_en": "Garden House",
+  "subtitle_pl": "Krowodrza, Kraków — Projekt akademicki, PK 2020/2021",
+  "subtitle_en": "Krowodrza, Kraków — Academic project, CUT 2020/2021",
+  "card_desc_pl": "Dom jednorodzinny zintegrowany z naturą — zrównoważona architektura z ogrodem i stawem retencyjnym.",
+  "card_desc_en": "A single-family house integrated with nature — sustainable architecture with garden and retention pond.",
+  "tags": [
+    "Residential",
+    "Single-family",
+    "Zrównoważony",
+    "Indoor-outdoor",
+    "BMS"
+  ],
+  "thumb": "./garden house/_img2/viz1_ext1.jpg",
+  "gradient": "linear-gradient(135deg, #151f15 0%, #1e2e1e 40%, #0c140c 100%)",
+  "story": [
+    {
+      "pl": "Dom jednorodzinny na Krowodrzy, Kraków — projekt akademicki, Politechnika Krakowska 2020/2021. Wiodącą ideą była minimalizacja śladu węglowego: konstrukcja z bloczków silikatowych, pompa ciepła, wentylacja mechaniczna z rekuperatorem, odwodnienie wewnętrzne, system BMS. Czysta horyzontalna bryła otwiera się widokowo na południe — na ogród i naturalny staw retencyjny.",
+      "en": "Single-family house in Krowodrza, Kraków — academic project, Cracow University of Technology 2020/2021. The leading concept: minimising the carbon footprint via silicate block construction, heat pump, mechanical ventilation with heat recovery, internal drainage and a BMS system. The clean horizontal volume opens southward onto the garden and natural retention pond.",
+      "img": "./garden house/_img2/viz1_ext1.jpg"
+    },
+    {
+      "pl": "Wnętrza zaprojektowane w estetyce japandi — drewno, beton architektoniczny, marmurowe posadzki, pełnościenne przeszklenia łączące salon z tarasem. Salon z aneksem kuchennym i biblioteka ze ścianą regałów otwierają się na zieleń — granica między wnętrzem a ogrodem celowo się zaciera.",
+      "en": "The interiors follow a japandi aesthetic — timber, exposed concrete, marble floors and full-height glazing connecting the living space to the terrace. The open-plan living/kitchen and the full-shelving library both open onto the greenery — the boundary between inside and garden is deliberately dissolved.",
+      "img": "./garden house/_img2/viz2_int1.jpg"
+    },
+    {
+      "pl": "Taras z pergolą drewnianą tworzy przedłużenie salonu — przestrzeń wypoczynku ukryta za pionowymi lamellami. Projekt obejmuje pełną dokumentację wykonawczą: rzuty 1:100 i 1:50, elewacje, przekroje, instalacje oraz odręczne szkice koncepcyjne.",
+      "en": "The timber pergola terrace extends the living room — a retreat screened by vertical fins. Full construction documentation: plans at 1:100 and 1:50, elevations, sections, services and freehand concept sketches.",
+      "img": "./garden house/_img2/viz2_int2.jpg"
+    },
+    {
+      "imgs": [
+        "./garden house/_img2/viz1_ext2.jpg",
+        "./garden house/_img2/viz1_ext3.jpg",
+        "./garden house/_img2/viz1_1.jpg",
+        "./garden house/_img2/viz2_int3.jpg",
+        "./garden house/_img2/viz2_1.jpg",
+        "./garden house/_img2/elevations_2.jpg",
+        "./garden house/_img2/site_4.jpg",
+        "./garden house/_img2/gf_plan_3.jpg",
+        "./garden house/_img2/sections_2.jpg",
+        "./garden house/_img2/sections_5.jpg",
+        "./garden house/_img2/sections_8.jpg",
+        "./garden house/_img2/concept_3.jpg",
+        "./garden house/_img2/handsketch_1.jpg",
+        "./garden house/_img2/handsketch_2.jpg",
+        "./garden house/_img2/handsketch_3.jpg"
+      ]
+    }
+  ]
+}

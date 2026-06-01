@@ -1723,16 +1723,19 @@ document.addEventListener('keydown', e => {
 });
 
 /* ── INIT ────────────────────────────────────────────────────── */
-fetch('./data/projects.json')
+fetch('./data/order.json')
   .then(r => r.json())
+  .then(({ order }) =>
+    Promise.all(order.map(id =>
+      fetch(`./data/projects/${id}.json`).then(r => r.json())
+    ))
+  )
   .then(data => {
-    // data may be an array directly, or {projects: [...]}
-    projects = (Array.isArray(data) ? data : data.projects || []).map(normaliseProject);
+    projects = data.map(normaliseProject);
     renderList();
     initScrollAnimations();
   })
   .catch(() => {
-    // Fallback: use the placeholder data bundled in the HTML
     projects = _projectsPlaceholder.map(normaliseProject);
     renderList();
     initScrollAnimations();

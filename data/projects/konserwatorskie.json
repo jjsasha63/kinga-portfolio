@@ -1,0 +1,47 @@
+{
+  "id": "konserwatorskie",
+  "featured": false,
+  "category_pl": "Projektowanie konserwatorskie",
+  "category_en": "Conservation Design",
+  "title_pl": "Przebudowa Dawnej Fabryki Tytoniu",
+  "title_en": "Conversion of Former Tobacco Factory",
+  "subtitle_pl": "ul. Dolnych Młynów 10, Kraków — obiekt wpisany do rejestru zabytków A-1437/M",
+  "subtitle_en": "ul. Dolnych Młynów 10, Kraków — listed building, heritage register A-1437/M",
+  "card_desc_pl": "Adaptacja historycznego budynku c.k. Fabryki Tytoniowo-Cygarowej na centrum biurowo-artystyczne.",
+  "card_desc_en": "Adaptive reuse of the historic Imperial and Royal Tobacco Factory as a business and arts centre.",
+  "tags": [
+    "Konserwacja",
+    "1405 m²",
+    "Heritage",
+    "Adaptive reuse",
+    "Kraków",
+    "UNESCO buffer zone"
+  ],
+  "thumb": "./projektowanie konsw/_img2/board_p20_1.jpg",
+  "gradient": "linear-gradient(135deg, #201810 0%, #332618 40%, #160f08 100%)",
+  "story": [
+    {
+      "pl": "Adaptacja dawnej Cesarsko-Królewskiej Fabryki Tytoniowo-Cygarowej przy ul. Dolnych Młynów 10, Kraków — obiekt wpisany do rejestru zabytków (A-1437/M), strefa buforowa UNESCO. Projekt dyplomowy, Katedra Historii Architektury i Konserwacji Zabytków PK, rok ak. 2023/2024.",
+      "en": "Adaptive reuse of the former Imperial and Royal Tobacco and Cigar Factory at ul. Dolnych Młynów 10, Kraków — listed building (A-1437/M), UNESCO buffer zone. Diploma project, Department of Architectural History and Heritage Conservation, CUT, academic year 2023/2024.",
+      "img": "./projektowanie konsw/_img2/p18_render.jpg"
+    },
+    {
+      "pl": "Nowa funkcja: biuro architektoniczne z pracowniami modelarskimi, salami szkoleniowymi, strefą relaksu i sklepem artystycznym. Wnętrza w jasnej, eleganckiej kolorystyce: biele, jasne drewno, delikatny róż — celowy kontrast z surową historyczną tkanką budynku.",
+      "en": "New function: an architecture studio with modelling workshops, training rooms, a relaxation zone and an art shop. Interiors designed in a light, elegant palette — whites, pale timber, soft rose — in deliberate contrast to the building's raw historic fabric.",
+      "img": "./projektowanie konsw/_img2/p19_renders.jpg"
+    },
+    {
+      "pl": "Elewacja zachowana w oryginalnej barwie ochrowo-różowej. Projekt obejmuje: analizę zrównoważonego zagospodarowania terenu, rzuty wszystkich kondygnacji 1:100, cztery elewacje 1:100 oraz program konserwatorski z wnioskami technicznymi.",
+      "en": "The façade is preserved in its original ochre-rose colour. The project includes: sustainable site analysis, floor plans at 1:100, all four elevations at 1:100, and a conservation programme with structural recommendations.",
+      "img": "./projektowanie konsw/_img2/board_p20_1.jpg"
+    },
+    {
+      "imgs": [
+        "./projektowanie konsw/_img2/board_p16_1.jpg",
+        "./projektowanie konsw/_img2/board_p17_1.jpg",
+        "./projektowanie konsw/_img2/board_p18_1.jpg",
+        "./projektowanie konsw/_img2/board_p19_1.jpg"
+      ]
+    }
+  ]
+}

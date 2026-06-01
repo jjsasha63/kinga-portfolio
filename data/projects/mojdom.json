@@ -1,0 +1,90 @@
+{
+  "id": "mojdom",
+  "featured": false,
+  "category_pl": "Projektowanie wnętrz",
+  "category_en": "Interior Design",
+  "title_pl": "Mój Dom — Projekt Wnętrz",
+  "title_en": "My Home — Interior Design",
+  "subtitle_pl": "Projekt autorski — kompleksowa aranżacja domu z realizacją",
+  "subtitle_en": "Personal project — full interior design from concept to completion",
+  "card_desc_pl": "Kompleksowy projekt wnętrz własnego domu — od koncepcji po gotową realizację.",
+  "card_desc_en": "A complete interior design of own home — from concept to finished execution.",
+  "tags": [
+    "Wnętrza",
+    "Realizacja",
+    "Projekt autorski",
+    "LED",
+    "Jodełka dębowa"
+  ],
+  "thumb": "./moj dom/PHOTO-2026-05-20-11-22-22.jpg",
+  "gradient": "linear-gradient(135deg, #1a1520 0%, #2a1f35 40%, #100d18 100%)",
+  "video": "./moj dom/VIDEO-2026-05-20-11-23-23.mp4",
+  "story": [
+    {
+      "pl": "Projekt kompleksowej aranżacji wnętrz własnego domu — od opracowania koncepcji, przez dobór materiałów i mebli, po finalną realizację. Dokumentuje pełen proces: plany funkcjonalne każdego pomieszczenia i fotografię wnętrz po realizacji.",
+      "en": "A comprehensive interior design of the designer's own home — from concept development, through material and furniture selection, to final execution. Documents the full process: functional plans for each room and interior photography after completion.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-19-13.jpg"
+    },
+    {
+      "pl": "Otwarta przestrzeń dzienna łącząca salon, jadalnię i kuchnię zaprojektowana wokół kilku kluczowych elementów: jodełka dębowa na podłodze, dekoracyjne pilastry z taśmą LED, drewniany mebel RTV na ściance telewizyjnej w kolorze szarego betonu. Okrągłe lustro optycznie pogłębia przestrzeń i odbija naturalne światło.",
+      "en": "The open-plan living/dining/kitchen is designed around a few key signature elements: oak herringbone flooring, decorative LED-lit pilasters, a timber floating TV unit against a grey concrete-toned feature wall. A circular mirror optically deepens the space and bounces natural light.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-22-22.jpg"
+    },
+    {
+      "pl": "Klatka schodowa z dębowymi stopniami, białymi pionowymi tralkami i taśmą LED wmontowaną w wnękę sufitową — detal łączący funkcję z estetyką. Hol wejściowy z lustrem LED i drewnianymi schodami widocznymi przez szklaną balustradę. Projekt stanowi praktyczny dowód prowadzenia inwestycji od koncepcji po klucze w drzwiach.",
+      "en": "The oak staircase with white vertical balusters and LED cove lighting built into the ceiling recess — a detail uniting function and aesthetics. The entrance hall with an LED mirror and wooden stairs visible through the glass balustrade. This project is a practical demonstration of managing an interior from concept right through to handover.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-23-13.jpg"
+    },
+    {
+      "imgs": [
+        "./moj dom/PHOTO-2026-05-20-11-19-14.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-17.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-20.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-22.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-24.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-38.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-40.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-41.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-42.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-43.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-44.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-45.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-46.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-47.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-48.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-36.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-37.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-39.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-40.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-42.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-43.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-45.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-46.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-47.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-48.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-50.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-51.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-52.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-54.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-58.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-22-59.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-00.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-02.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-03.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-05.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-06.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-08.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-09.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-11.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-14.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-15.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-17.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-20.jpg",
+        "./moj dom/lazienka_0.jpg",
+        "./moj dom/lazienka_1.jpg",
+        "./moj dom/lazienka_2.jpg",
+        "./moj dom/sypialnia_0.jpg"
+      ]
+    }
+  ]
+}
