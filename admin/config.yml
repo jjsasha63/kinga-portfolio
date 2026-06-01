@@ -19,6 +19,9 @@ collections:
     identifier_field: "title_pl"
     summary: "{{category_pl}} — {{title_pl}}"
 
+    editor:
+      preview: true
+
     fields:
 
       # ── 1. MAIN IMAGE ────────────────────────────────────────
@@ -85,12 +88,8 @@ collections:
 
       - label: "Tags"
         name: tags
-        widget: list
-        hint: "Short labels shown on the card — e.g. Kraków, Residential, 2024, SPA. 4–6 tags is ideal."
-        field:
-          label: Tag
-          name: tag
-          widget: string
+        widget: string
+        hint: "Comma-separated labels shown on the card — e.g. Kraków, Residential, 2024, SPA. 4–6 tags is ideal."
 
       # ── 4. PROJECT STORY ─────────────────────────────────────
       - label: "Project story"

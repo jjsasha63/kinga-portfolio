@@ -9,13 +9,7 @@
   "subtitle_en": "Personal project — full interior design from concept to completion",
   "card_desc_pl": "Kompleksowy projekt wnętrz własnego domu — od koncepcji po gotową realizację.",
   "card_desc_en": "A complete interior design of own home — from concept to finished execution.",
-  "tags": [
-    "Wnętrza",
-    "Realizacja",
-    "Projekt autorski",
-    "LED",
-    "Jodełka dębowa"
-  ],
+  "tags": "Wnętrza, Realizacja, Projekt autorski, LED, Jodełka dębowa",
   "thumb": "./moj dom/PHOTO-2026-05-20-11-22-22.jpg",
   "video": "./moj dom/VIDEO-2026-05-20-11-23-23.mp4",
   "story": [

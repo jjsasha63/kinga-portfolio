@@ -20,15 +20,43 @@
       var get = this.props.getAsset;
 
       var title    = e.getIn(['data','title_pl'])    || 'Tytuł projektu';
-      var titleEn  = e.getIn(['data','title_en'])    || '';
       var cat      = e.getIn(['data','category_pl']) || 'Kategoria';
       var subtitle = e.getIn(['data','subtitle_pl']) || '';
       var desc     = e.getIn(['data','card_desc_pl'])|| '';
       var featured = e.getIn(['data','featured']);
       var badge    = e.getIn(['data','badge_pl'])    || 'Wyróżniony projekt';
       var thumb    = e.getIn(['data','thumb']);
-      var tags     = e.getIn(['data','tags']);
+      var tagsRaw  = e.getIn(['data','tags']);
+      var story    = e.getIn(['data','story']);
       var thumbSrc = thumb ? get(thumb).toString() : null;
+
+      /* Normalise tags — now a comma-separated string */
+      var tagList = [];
+      if (typeof tagsRaw === 'string' && tagsRaw.trim()) {
+        tagList = tagsRaw.split(',').map(function(t){ return t.trim(); }).filter(Boolean);
+      } else if (tagsRaw && tagsRaw.size) {
+        /* legacy list format */
+        tagsRaw.forEach(function(t){ tagList.push(typeof t === 'string' ? t : (t.get && t.get('tag')) || ''); });
+      }
+
+      /* Collect story images for the strip */
+      var storyImgs = [];
+      if (story && story.size) {
+        story.forEach(function(block) {
+          var img = block.get('img');
+          if (img) {
+            var src = get(img).toString();
+            if (src) storyImgs.push(src);
+          }
+          var imgs = block.get('imgs');
+          if (imgs && imgs.size) {
+            imgs.forEach(function(i) {
+              var src2 = get(i).toString();
+              if (src2) storyImgs.push(src2);
+            });
+          }
+        });
+      }
 
       /* Light warm palette — matches portfolio modal / about section */
       var c = {
@@ -49,7 +77,7 @@
         ),
 
         /* ── project card ── */
-        h('div', { style: { maxWidth: '820px', border: '1px solid ' + c.border, background: '#fff', display: 'grid', gridTemplateColumns: '62% 38%', marginBottom: '2.5rem' } },
+        h('div', { style: { maxWidth: '820px', border: '1px solid ' + c.border, background: '#fff', display: 'grid', gridTemplateColumns: '62% 38%', marginBottom: '2rem' } },
 
           /* image side */
           h('div', { style: { position: 'relative', overflow: 'hidden', aspectRatio: '4/3', background: c.bg2 } },
@@ -68,9 +96,9 @@
             h('h2',  { style: { fontFamily: '"Cormorant Garamond", serif', fontSize: '2rem', fontWeight: 300, color: c.text, margin: 0, lineHeight: 1.05 } }, title),
             h('div', { style: { fontSize: '0.72rem', color: c.muted, lineHeight: 1.55 } }, subtitle),
             h('p',   { style: { fontSize: '0.85rem', color: c.text, opacity: 0.75, lineHeight: 1.65, margin: 0 } }, desc),
-            tags && tags.size
+            tagList.length
               ? h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.15rem' } },
-                  tags.map(function (t, i) {
+                  tagList.map(function (t, i) {
                     return h('span', { key: i, style: { fontFamily: 'Syne, sans-serif', fontSize: '0.56rem', letterSpacing: '0.08em', textTransform: 'uppercase', padding: '0.22rem 0.65rem', border: '1px solid ' + c.border, borderRadius: '100px', color: c.muted } }, t);
                   })
                 )
@@ -79,10 +107,22 @@
           )
         ),
 
+        /* ── story image strip (if any images uploaded) ── */
+        storyImgs.length ? h('div', { style: { maxWidth: '820px', marginBottom: '2rem' } },
+          h('p', { style: { fontSize: '0.6rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: c.muted, fontFamily: 'Syne, sans-serif', marginBottom: '0.6rem' } },
+            'Zdjęcia w treści projektu (' + storyImgs.length + ')'
+          ),
+          h('div', { style: { display: 'flex', gap: '4px', overflowX: 'auto', scrollbarWidth: 'none' } },
+            storyImgs.map(function(src, i) {
+              return h('img', { key: i, src: src, style: { height: '120px', width: 'auto', objectFit: 'cover', flexShrink: 0, border: '1px solid ' + c.border } });
+            })
+          )
+        ) : null,
+
         /* ── tip ── */
         h('div', { style: { maxWidth: '820px', padding: '1rem 1.25rem', background: 'rgba(88,114,164,.07)', border: '1px solid rgba(88,114,164,.18)', borderRadius: '6px', fontSize: '0.78rem', color: c.muted, lineHeight: 1.6 } },
           h('strong', { style: { color: c.accent, fontWeight: 500 } }, 'Wskazówka: '),
-          'Podgląd aktualizuje się na żywo. Kliknij "Save" a strona odświeży się automatycznie po ok. 30 sekundach.'
+          'Podgląd aktualizuje się na żywo po każdej zmianie. Kliknij "Save" a strona odświeży się automatycznie po ok. 30 sekundach.'
         )
       );
     }
@@ -97,8 +137,6 @@
 
   /* ─────────────────────────────────────────────────────────────
      INJECT COBALT ACCENT INTO CMS SHELL BUTTONS
-     (Decap CSS is encapsulated — we can only do a best-effort
-      injection; it applies to whatever class names exist at load)
   ───────────────────────────────────────────────────────────── */
   function injectShellStyles () {
     if (document.getElementById('kt-cms-styles')) return;
