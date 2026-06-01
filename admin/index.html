@@ -4,20 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio Admin — Kinga Trojan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@300;400;500&family=Syne:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Inter:wght@300;400;500&family=Syne:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 <script>
 (function () {
 
-  /* ── LIVE PROJECT CARD PREVIEW ─────────────────────────────── */
+  /* ─────────────────────────────────────────────────────────────
+     LIVE PREVIEW — light warm theme matching the portfolio modal
+  ───────────────────────────────────────────────────────────── */
   var ProjectPreview = createClass({
     render: function () {
       var e   = this.props.entry;
       var get = this.props.getAsset;
 
       var title    = e.getIn(['data','title_pl'])    || 'Tytuł projektu';
+      var titleEn  = e.getIn(['data','title_en'])    || '';
       var cat      = e.getIn(['data','category_pl']) || 'Kategoria';
       var subtitle = e.getIn(['data','subtitle_pl']) || '';
       var desc     = e.getIn(['data','card_desc_pl'])|| '';
@@ -27,45 +30,59 @@
       var tags     = e.getIn(['data','tags']);
       var thumbSrc = thumb ? get(thumb).toString() : null;
 
-      var css = {
-        page: { background:'#080808', minHeight:'100vh', padding:'2rem', fontFamily:'Inter,sans-serif' },
-        label: { color:'#6a6560', fontSize:'0.65rem', letterSpacing:'0.2em', textTransform:'uppercase', fontFamily:'Syne,sans-serif', marginBottom:'1.25rem' },
-        card: { display:'grid', gridTemplateColumns:'62% 38%', border:'1px solid rgba(255,255,255,.065)', maxWidth:'820px' },
-        imgWrap: { position:'relative', overflow:'hidden', aspectRatio:'4/3', background:'#161616' },
-        img: { width:'100%', height:'100%', objectFit:'cover', display:'block' },
-        placeholder: { width:'100%', height:'100%', background:'linear-gradient(135deg,#161616,#242424)', display:'flex', alignItems:'center', justifyContent:'center', color:'#444', fontSize:'0.8rem' },
-        badge: { position:'absolute', top:'1rem', left:'1rem', background:'#5872a4', color:'#fff', fontFamily:'Syne,sans-serif', fontSize:'0.56rem', fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', padding:'0.28rem 0.7rem', borderRadius:'100px' },
-        info: { padding:'2.5rem 2rem', background:'#0d0d0d', display:'flex', flexDirection:'column', gap:'0.55rem', borderLeft:'1px solid rgba(255,255,255,.065)' },
-        cat:   { color:'#5872a4', fontSize:'0.62rem', letterSpacing:'0.18em', textTransform:'uppercase', fontFamily:'Syne,sans-serif', fontWeight:600 },
-        title: { fontFamily:'Cormorant Garamond,serif', fontSize:'2rem', fontWeight:300, color:'#edeae5', margin:0, lineHeight:1.1 },
-        sub:   { fontSize:'0.72rem', color:'#6a6560', lineHeight:1.55 },
-        desc:  { fontSize:'0.85rem', color:'#edeae5', opacity:0.75, lineHeight:1.65, margin:0 },
-        tags:  { display:'flex', flexWrap:'wrap', gap:'0.35rem', marginTop:'0.15rem' },
-        tag:   { fontFamily:'Syne,sans-serif', fontSize:'0.56rem', letterSpacing:'0.08em', textTransform:'uppercase', padding:'0.22rem 0.65rem', border:'1px solid rgba(255,255,255,.065)', borderRadius:'100px', color:'#6a6560' },
-        cta:   { fontSize:'0.67rem', fontFamily:'Syne,sans-serif', fontWeight:500, color:'#5872a4', marginTop:'0.25rem' }
+      /* Light warm palette — matches portfolio modal / about section */
+      var c = {
+        bg:      '#f6f2ed',
+        bg2:     '#ede9e3',
+        text:    '#1a1818',
+        muted:   '#5a5550',
+        border:  'rgba(0,0,0,.09)',
+        accent:  '#5872a4',
+        accent2: '#405a8c',
       };
 
-      return h('div', { style: css.page },
-        h('div', { style: css.label }, '↓ Podgląd — tak wygląda karta na stronie'),
-        h('div', { style: css.card },
-          h('div', { style: css.imgWrap },
-            featured ? h('div', { style: css.badge }, badge) : null,
+      return h('div', { style: { background: c.bg, minHeight: '100vh', padding: '2rem', fontFamily: 'Inter, sans-serif' } },
+
+        /* ── preview label ── */
+        h('p', { style: { fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: c.muted, fontFamily: 'Syne, sans-serif', marginBottom: '1.5rem' } },
+          '↓ Podgląd — karta projektu na stronie głównej'
+        ),
+
+        /* ── project card ── */
+        h('div', { style: { maxWidth: '820px', border: '1px solid ' + c.border, background: '#fff', display: 'grid', gridTemplateColumns: '62% 38%', marginBottom: '2.5rem' } },
+
+          /* image side */
+          h('div', { style: { position: 'relative', overflow: 'hidden', aspectRatio: '4/3', background: c.bg2 } },
+            featured ? h('div', { style: { position: 'absolute', top: '1rem', left: '1rem', background: c.accent, color: '#fff', fontFamily: 'Syne, sans-serif', fontSize: '0.56rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '0.28rem 0.7rem', borderRadius: '100px', zIndex: 2 } }, badge) : null,
             thumbSrc
-              ? h('img',  { src: thumbSrc, style: css.img })
-              : h('div',  { style: css.placeholder }, 'Brak zdjęcia głównego')
+              ? h('img', { src: thumbSrc, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } })
+              : h('div', { style: { width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: c.muted, fontSize: '0.8rem', flexDirection: 'column', gap: '0.5rem' } },
+                  h('span', { style: { fontSize: '1.5rem' } }, '🖼'),
+                  h('span', null, 'Dodaj zdjęcie główne')
+                )
           ),
-          h('div', { style: css.info },
-            h('div', { style: css.cat   }, cat),
-            h('h2',  { style: css.title }, title),
-            h('div', { style: css.sub   }, subtitle),
-            h('p',   { style: css.desc  }, desc),
+
+          /* info side */
+          h('div', { style: { padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '0.55rem', borderLeft: '1px solid ' + c.border } },
+            h('div', { style: { color: c.accent, fontSize: '0.62rem', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'Syne, sans-serif', fontWeight: 600 } }, cat),
+            h('h2',  { style: { fontFamily: '"Cormorant Garamond", serif', fontSize: '2rem', fontWeight: 300, color: c.text, margin: 0, lineHeight: 1.05 } }, title),
+            h('div', { style: { fontSize: '0.72rem', color: c.muted, lineHeight: 1.55 } }, subtitle),
+            h('p',   { style: { fontSize: '0.85rem', color: c.text, opacity: 0.75, lineHeight: 1.65, margin: 0 } }, desc),
             tags && tags.size
-              ? h('div', { style: css.tags },
-                  tags.map(function(t,i){ return h('span',{key:i,style:css.tag},t); })
+              ? h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.15rem' } },
+                  tags.map(function (t, i) {
+                    return h('span', { key: i, style: { fontFamily: 'Syne, sans-serif', fontSize: '0.56rem', letterSpacing: '0.08em', textTransform: 'uppercase', padding: '0.22rem 0.65rem', border: '1px solid ' + c.border, borderRadius: '100px', color: c.muted } }, t);
+                  })
                 )
               : null,
-            h('div', { style: css.cta }, 'Otwórz projekt →')
+            h('div', { style: { fontSize: '0.67rem', fontFamily: 'Syne, sans-serif', fontWeight: 500, color: c.accent, marginTop: '0.3rem' } }, 'Otwórz projekt →')
           )
+        ),
+
+        /* ── tip ── */
+        h('div', { style: { maxWidth: '820px', padding: '1rem 1.25rem', background: 'rgba(88,114,164,.07)', border: '1px solid rgba(88,114,164,.18)', borderRadius: '6px', fontSize: '0.78rem', color: c.muted, lineHeight: 1.6 } },
+          h('strong', { style: { color: c.accent, fontWeight: 500 } }, 'Wskazówka: '),
+          'Podgląd aktualizuje się na żywo. Kliknij "Save" a strona odświeży się automatycznie po ok. 30 sekundach.'
         )
       );
     }
@@ -73,26 +90,28 @@
 
   CMS.registerPreviewTemplate('projects', ProjectPreview);
 
-  /* ── FONTS INSIDE PREVIEW PANE ─────────────────────────────── */
+  /* Load portfolio fonts inside the preview iframe */
   CMS.registerPreviewStyle(
-    'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Syne:wght@500;600&family=Inter:wght@300;400;500&display=swap'
+    'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Syne:wght@500;600&family=Inter:wght@300;400;500&display=swap'
   );
 
-  /* ── INJECT STYLES INTO CMS SHELL ─────────────────────────── */
-  function injectShellStyles() {
+  /* ─────────────────────────────────────────────────────────────
+     INJECT COBALT ACCENT INTO CMS SHELL BUTTONS
+     (Decap CSS is encapsulated — we can only do a best-effort
+      injection; it applies to whatever class names exist at load)
+  ───────────────────────────────────────────────────────────── */
+  function injectShellStyles () {
     if (document.getElementById('kt-cms-styles')) return;
     var s = document.createElement('style');
     s.id = 'kt-cms-styles';
-    s.textContent = `
-      [class*="AppHeader"],[class*="app-header"]{background:#080808!important;border-bottom:1px solid rgba(255,255,255,.08)!important;}
-      [class*="Nav__"],[class*="sidebar"]{background:#0d0d0d!important;border-right:1px solid rgba(255,255,255,.065)!important;}
-      [class*="NavLink"][class*="active"]{color:#5872a4!important;border-left-color:#5872a4!important;}
-      button[class*="primary"]{background:#5872a4!important;border-color:#5872a4!important;}
-      button[class*="primary"]:hover{background:#405a8c!important;}
-    `;
+    s.textContent = [
+      'button[class*="primary"],a[class*="primary"]{background:#5872a4!important;border-color:#5872a4!important;color:#fff!important;}',
+      'button[class*="primary"]:hover{background:#405a8c!important;}',
+      '[class*="NavLink"][class*="active"],[class*="nav"][class*="active"]{color:#5872a4!important;border-color:#5872a4!important;}',
+    ].join('');
     document.head.appendChild(s);
   }
-  [400, 1000, 2500].forEach(function(ms){ setTimeout(injectShellStyles, ms); });
+  [500, 1500, 3000].forEach(function (ms) { setTimeout(injectShellStyles, ms); });
 
 })();
 </script>

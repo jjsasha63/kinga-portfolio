@@ -7,7 +7,7 @@ public_folder: "uploads"
 
 collections:
 
-  # ── PROJECTS (one file per project) ──────────────────────────
+  # ── PROJECTS ──────────────────────────────────────────────────
   - name: "projects"
     label: "Projects"
     label_singular: "Project"
@@ -17,104 +17,130 @@ collections:
     extension: "json"
     format: "json"
     identifier_field: "title_pl"
-    summary: "{{title_pl}}"
+    summary: "{{category_pl}} — {{title_pl}}"
+
     fields:
 
-      - label: "ID (unique, no spaces)"
-        name: id
-        widget: string
-        hint: "e.g. my-new-project — used as filename, don't change after creation"
+      # ── 1. MAIN IMAGE ────────────────────────────────────────
+      - label: "Main image (thumbnail)"
+        name: thumb
+        widget: image
+        hint: "This image appears on the project card on the homepage. Use a render or interior photo — not a plan or text board."
 
-      - label: "Featured?"
+      - label: "Mark as featured?"
         name: featured
         widget: boolean
         default: false
+        hint: "Featured projects show a coloured ribbon badge on the card."
 
-      - label: "Badge (PL)"
+      - label: "Badge text (PL)"
         name: badge_pl
         widget: string
         required: false
-        hint: "e.g. Wyróżniony projekt — leave blank for none"
+        hint: "Only shown if 'Mark as featured' is on. e.g. Wyróżniony projekt"
 
-      - label: "Badge (EN)"
+      - label: "Badge text (EN)"
         name: badge_en
         widget: string
         required: false
 
-      - label: "Category (PL)"
-        name: category_pl
-        widget: string
-
-      - label: "Category (EN)"
-        name: category_en
-        widget: string
-
+      # ── 2. TITLES ────────────────────────────────────────────
       - label: "Title (PL)"
         name: title_pl
         widget: string
+        hint: "Main project name shown on the card and in the detail view."
 
       - label: "Title (EN)"
         name: title_en
         widget: string
 
-      - label: "Subtitle (PL)"
+      - label: "Category (PL)"
+        name: category_pl
+        widget: string
+        hint: "e.g. Projektowanie wnętrz / Architektura mieszkaniowa"
+
+      - label: "Category (EN)"
+        name: category_en
+        widget: string
+        hint: "e.g. Interior Design / Residential Architecture"
+
+      - label: "Subtitle / location (PL)"
         name: subtitle_pl
         widget: string
+        hint: "Shown in smaller text under the title. e.g. Kraków — Projekt wnętrz, 2024"
 
-      - label: "Subtitle (EN)"
+      - label: "Subtitle / location (EN)"
         name: subtitle_en
         widget: string
 
-      - label: "Card description (PL)"
+      # ── 3. CARD DESCRIPTION & TAGS ───────────────────────────
+      - label: "Short description (PL)"
         name: card_desc_pl
         widget: text
+        hint: "1–2 sentences shown on the homepage card. Keep it punchy."
 
-      - label: "Card description (EN)"
+      - label: "Short description (EN)"
         name: card_desc_en
         widget: text
 
       - label: "Tags"
         name: tags
         widget: list
+        hint: "Short labels shown on the card — e.g. Kraków, Residential, 2024, SPA. 4–6 tags is ideal."
         field:
           label: Tag
           name: tag
           widget: string
 
-      - label: "Thumbnail image"
-        name: thumb
-        widget: image
-
-      - label: "Video (optional)"
-        name: video
-        widget: file
-        required: false
-
-      - label: "Story blocks"
+      # ── 4. PROJECT STORY ─────────────────────────────────────
+      - label: "Project story"
         name: story
         widget: list
-        hint: "Each block = text paragraph + optional image. Last block can be gallery-only."
+        hint: >
+          Each block is one section of the project detail view.
+          A typical project has 3 text+image blocks followed by one gallery block at the end.
+          • Text block: fill in PL text, EN text, and one image alongside the text.
+          • Gallery block: leave text empty, add multiple images to 'Gallery images' — these appear as the scrollable strip.
         fields:
           - label: "Text (PL)"
             name: pl
             widget: text
             required: false
+            hint: "Leave empty for a gallery-only block."
+
           - label: "Text (EN)"
             name: en
             widget: text
             required: false
-          - label: "Image (alongside text)"
+
+          - label: "Image alongside text"
             name: img
             widget: image
             required: false
+            hint: "One image displayed next to the paragraph. Leave empty for a gallery-only block."
+
           - label: "Gallery images"
             name: imgs
             widget: list
             required: false
+            hint: "Multiple images for the scrollable strip. Use for the final 'gallery block' — leave empty in text blocks."
             field:
               label: Image
               name: image
               widget: image
+
+      # ── 5. VIDEO (OPTIONAL) ──────────────────────────────────
+      - label: "Walkthrough video (optional)"
+        name: video
+        widget: file
+        required: false
+        hint: "Upload an .mp4 video — shown at the bottom of the project detail view."
+
+      # ── 6. ADVANCED (don't touch unless you know what you're doing) ──
+      - label: "Project ID"
+        name: id
+        widget: string
+        hint: "⚠️ Set this once when creating a project and never change it afterwards — it is used as the filename and changing it will break existing links. Use lowercase letters, numbers and hyphens only. e.g. apartment-krakow-2024"
 
   # ── PROJECT ORDER ─────────────────────────────────────────────
   - name: "settings"
@@ -124,10 +150,10 @@ collections:
         name: "order"
         file: "data/order.json"
         fields:
-          - label: "Project IDs in display order"
+          - label: "Project order"
             name: order
             widget: list
-            hint: "Drag to reorder. Each value must match a project's ID exactly."
+            hint: "Drag to reorder. Each value must exactly match a project's ID. Projects are displayed on the homepage in this order."
             field:
               label: Project ID
               name: id
