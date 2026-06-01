@@ -19,9 +19,6 @@ collections:
     identifier_field: "title_pl"
     summary: "{{category_pl}} — {{title_pl}}"
 
-    editor:
-      preview: true
-
     fields:
 
       # ── 1. MAIN IMAGE ────────────────────────────────────────
