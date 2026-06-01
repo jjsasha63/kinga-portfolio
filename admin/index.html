@@ -3,9 +3,98 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio CMS — Kinga Trojan</title>
+  <title>Portfolio Admin — Kinga Trojan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@300;400;500&family=Syne:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+(function () {
+
+  /* ── LIVE PROJECT CARD PREVIEW ─────────────────────────────── */
+  var ProjectPreview = createClass({
+    render: function () {
+      var e   = this.props.entry;
+      var get = this.props.getAsset;
+
+      var title    = e.getIn(['data','title_pl'])    || 'Tytuł projektu';
+      var cat      = e.getIn(['data','category_pl']) || 'Kategoria';
+      var subtitle = e.getIn(['data','subtitle_pl']) || '';
+      var desc     = e.getIn(['data','card_desc_pl'])|| '';
+      var featured = e.getIn(['data','featured']);
+      var badge    = e.getIn(['data','badge_pl'])    || 'Wyróżniony projekt';
+      var thumb    = e.getIn(['data','thumb']);
+      var tags     = e.getIn(['data','tags']);
+      var thumbSrc = thumb ? get(thumb).toString() : null;
+
+      var css = {
+        page: { background:'#080808', minHeight:'100vh', padding:'2rem', fontFamily:'Inter,sans-serif' },
+        label: { color:'#6a6560', fontSize:'0.65rem', letterSpacing:'0.2em', textTransform:'uppercase', fontFamily:'Syne,sans-serif', marginBottom:'1.25rem' },
+        card: { display:'grid', gridTemplateColumns:'62% 38%', border:'1px solid rgba(255,255,255,.065)', maxWidth:'820px' },
+        imgWrap: { position:'relative', overflow:'hidden', aspectRatio:'4/3', background:'#161616' },
+        img: { width:'100%', height:'100%', objectFit:'cover', display:'block' },
+        placeholder: { width:'100%', height:'100%', background:'linear-gradient(135deg,#161616,#242424)', display:'flex', alignItems:'center', justifyContent:'center', color:'#444', fontSize:'0.8rem' },
+        badge: { position:'absolute', top:'1rem', left:'1rem', background:'#5872a4', color:'#fff', fontFamily:'Syne,sans-serif', fontSize:'0.56rem', fontWeight:600, letterSpacing:'0.14em', textTransform:'uppercase', padding:'0.28rem 0.7rem', borderRadius:'100px' },
+        info: { padding:'2.5rem 2rem', background:'#0d0d0d', display:'flex', flexDirection:'column', gap:'0.55rem', borderLeft:'1px solid rgba(255,255,255,.065)' },
+        cat:   { color:'#5872a4', fontSize:'0.62rem', letterSpacing:'0.18em', textTransform:'uppercase', fontFamily:'Syne,sans-serif', fontWeight:600 },
+        title: { fontFamily:'Cormorant Garamond,serif', fontSize:'2rem', fontWeight:300, color:'#edeae5', margin:0, lineHeight:1.1 },
+        sub:   { fontSize:'0.72rem', color:'#6a6560', lineHeight:1.55 },
+        desc:  { fontSize:'0.85rem', color:'#edeae5', opacity:0.75, lineHeight:1.65, margin:0 },
+        tags:  { display:'flex', flexWrap:'wrap', gap:'0.35rem', marginTop:'0.15rem' },
+        tag:   { fontFamily:'Syne,sans-serif', fontSize:'0.56rem', letterSpacing:'0.08em', textTransform:'uppercase', padding:'0.22rem 0.65rem', border:'1px solid rgba(255,255,255,.065)', borderRadius:'100px', color:'#6a6560' },
+        cta:   { fontSize:'0.67rem', fontFamily:'Syne,sans-serif', fontWeight:500, color:'#5872a4', marginTop:'0.25rem' }
+      };
+
+      return h('div', { style: css.page },
+        h('div', { style: css.label }, '↓ Podgląd — tak wygląda karta na stronie'),
+        h('div', { style: css.card },
+          h('div', { style: css.imgWrap },
+            featured ? h('div', { style: css.badge }, badge) : null,
+            thumbSrc
+              ? h('img',  { src: thumbSrc, style: css.img })
+              : h('div',  { style: css.placeholder }, 'Brak zdjęcia głównego')
+          ),
+          h('div', { style: css.info },
+            h('div', { style: css.cat   }, cat),
+            h('h2',  { style: css.title }, title),
+            h('div', { style: css.sub   }, subtitle),
+            h('p',   { style: css.desc  }, desc),
+            tags && tags.size
+              ? h('div', { style: css.tags },
+                  tags.map(function(t,i){ return h('span',{key:i,style:css.tag},t); })
+                )
+              : null,
+            h('div', { style: css.cta }, 'Otwórz projekt →')
+          )
+        )
+      );
+    }
+  });
+
+  CMS.registerPreviewTemplate('projects', ProjectPreview);
+
+  /* ── FONTS INSIDE PREVIEW PANE ─────────────────────────────── */
+  CMS.registerPreviewStyle(
+    'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Syne:wght@500;600&family=Inter:wght@300;400;500&display=swap'
+  );
+
+  /* ── INJECT STYLES INTO CMS SHELL ─────────────────────────── */
+  function injectShellStyles() {
+    if (document.getElementById('kt-cms-styles')) return;
+    var s = document.createElement('style');
+    s.id = 'kt-cms-styles';
+    s.textContent = `
+      [class*="AppHeader"],[class*="app-header"]{background:#080808!important;border-bottom:1px solid rgba(255,255,255,.08)!important;}
+      [class*="Nav__"],[class*="sidebar"]{background:#0d0d0d!important;border-right:1px solid rgba(255,255,255,.065)!important;}
+      [class*="NavLink"][class*="active"]{color:#5872a4!important;border-left-color:#5872a4!important;}
+      button[class*="primary"]{background:#5872a4!important;border-color:#5872a4!important;}
+      button[class*="primary"]:hover{background:#405a8c!important;}
+    `;
+    document.head.appendChild(s);
+  }
+  [400, 1000, 2500].forEach(function(ms){ setTimeout(injectShellStyles, ms); });
+
+})();
+</script>
 </body>
 </html>
