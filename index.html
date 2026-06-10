@@ -1468,9 +1468,13 @@ const _projectsPlaceholder = [
 /* ── LOAD PROJECTS ──────────────────────────────────────────── */
 // Normalise a project loaded from JSON (handles both old & CMS format)
 function normaliseProject(p) {
-  // tags: CMS stores as [{tag:"..."}] or ["..."], normalise to ["..."]
-  if (Array.isArray(p.tags) && p.tags.length && typeof p.tags[0] === 'object') {
+  // tags: CMS stores a comma-separated string; legacy formats: [{tag:"..."}] or ["..."]
+  if (typeof p.tags === 'string') {
+    p.tags = p.tags.split(',').map(t => t.trim()).filter(Boolean);
+  } else if (Array.isArray(p.tags) && p.tags.length && typeof p.tags[0] === 'object') {
     p.tags = p.tags.map(t => t.tag || t);
+  } else if (!Array.isArray(p.tags)) {
+    p.tags = [];
   }
   // story imgs: CMS stores as [{image:"..."}] or ["..."]
   if (Array.isArray(p.story)) {
