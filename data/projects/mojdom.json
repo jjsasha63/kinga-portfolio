@@ -3,80 +3,72 @@
   "featured": false,
   "category_pl": "Projektowanie wnętrz",
   "category_en": "Interior Design",
-  "title_pl": "Mój Dom — Projekt Wnętrz",
-  "title_en": "My Home — Interior Design",
-  "subtitle_pl": "Projekt autorski — kompleksowa aranżacja domu z realizacją",
-  "subtitle_en": "Personal project — full interior design from concept to completion",
-  "card_desc_pl": "Kompleksowy projekt wnętrz własnego domu — od koncepcji po gotową realizację.",
-  "card_desc_en": "A complete interior design of own home — from concept to finished execution.",
-  "tags": "Wnętrza, Realizacja, Projekt autorski, LED, Jodełka dębowa",
+  "title_pl": "Dom Jednorodzinny — Projekt i Realizacja Wnętrz",
+  "title_en": "Single-Family House — Interior Design & Realisation",
+  "subtitle_pl": "Kompleksowa aranżacja wnętrz — od koncepcji po realizację i dokumentację",
+  "subtitle_en": "Complete interior design — from concept to realisation and documentation",
+  "card_desc_pl": "Kompleksowy projekt wnętrz domu jednorodzinnego — cały proces inwestycyjny: koncepcja, materiały, realizacja.",
+  "card_desc_en": "Complete interior design of a single-family house — the full investment process: concept, materials, realisation.",
+  "tags": "Wnętrza, Realizacja, Rysunki techniczne, Jodełka dębowa, LED",
   "thumb": "./moj dom/PHOTO-2026-05-20-11-22-22.jpg",
   "video": "./moj dom/VIDEO-2026-05-20-11-23-23.mp4",
   "story": [
     {
-      "pl": "Projekt kompleksowej aranżacji wnętrz własnego domu — od opracowania koncepcji, przez dobór materiałów i mebli, po finalną realizację. Dokumentuje pełen proces: plany funkcjonalne każdego pomieszczenia i fotografię wnętrz po realizacji.",
-      "en": "A comprehensive interior design of the designer's own home — from concept development, through material and furniture selection, to final execution. Documents the full process: functional plans for each room and interior photography after completion.",
-      "img": "./moj dom/PHOTO-2026-05-20-11-19-13.jpg"
+      "pl": "Projekt kompleksowej aranżacji wnętrz domu jednorodzinnego obejmował cały proces inwestycyjny — od koncepcji i układów funkcjonalnych, przez dobór materiałów i wyposażenia, aż po realizację i dokumentację gotowych wnętrz.",
+      "en": "The complete interior design of this single-family house covered the entire investment process — from concept and functional layouts, through the selection of materials and furnishings, to realisation and documentation of the finished interiors.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-19-13.jpg",
+      "imgs": []
     },
     {
-      "pl": "Otwarta przestrzeń dzienna łącząca salon, jadalnię i kuchnię zaprojektowana wokół kilku kluczowych elementów: jodełka dębowa na podłodze, dekoracyjne pilastry z taśmą LED, drewniany mebel RTV na ściance telewizyjnej w kolorze szarego betonu. Okrągłe lustro optycznie pogłębia przestrzeń i odbija naturalne światło.",
-      "en": "The open-plan living/dining/kitchen is designed around a few key signature elements: oak herringbone flooring, decorative LED-lit pilasters, a timber floating TV unit against a grey concrete-toned feature wall. A circular mirror optically deepens the space and bounces natural light.",
-      "img": "./moj dom/PHOTO-2026-05-20-11-22-22.jpg"
+      "pl": "Główną część domu stanowi otwarta strefa dzienna łącząca salon, jadalnię i kuchnię. Ze względu na niską wysokość pomieszczeń (ok. 2,10 m) oraz nierówności ścian i sufitów, projekt oparto na jasnej kolorystyce z dominacją bieli, która optycznie powiększa przestrzeń i minimalizuje widoczność krzywizn. Przytulny charakter wnętrza podkreśla podłoga wykończona dębową jodełką. Dekoracyjne listwy MDF malowane na kolor ścian oraz pionowe linie LED dodatkowo podkreślają wysokość pomieszczeń. Centralnym punktem salonu jest duże okrągłe lustro umieszczone przy wejściu, które odbija światło i optycznie powiększa przestrzeń. Strefę RTV tworzy drewnopodobna zabudowa utrzymana w spójnej, jasnej stylistyce.",
+      "en": "The heart of the house is an open day zone combining the living room, dining area and kitchen. Due to the low ceiling height (approx. 2.10 m) and uneven walls and ceilings, the design is based on a bright palette dominated by white, which visually enlarges the space and minimises the visibility of irregularities. Oak herringbone flooring underlines the cosy character of the interior. Decorative MDF mouldings painted to match the walls and vertical LED lines further emphasise the height of the rooms. The focal point of the living room is a large round mirror by the entrance, reflecting light and visually expanding the space. The TV zone is formed by wood-effect cabinetry kept in a consistent, bright style.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-22-39.jpg",
+      "imgs": []
     },
     {
-      "pl": "Klatka schodowa z dębowymi stopniami, białymi pionowymi tralkami i taśmą LED wmontowaną w wnękę sufitową — detal łączący funkcję z estetyką. Hol wejściowy z lustrem LED i drewnianymi schodami widocznymi przez szklaną balustradę. Projekt stanowi praktyczny dowód prowadzenia inwestycji od koncepcji po klucze w drzwiach.",
-      "en": "The oak staircase with white vertical balusters and LED cove lighting built into the ceiling recess — a detail uniting function and aesthetics. The entrance hall with an LED mirror and wooden stairs visible through the glass balustrade. This project is a practical demonstration of managing an interior from concept right through to handover.",
-      "img": "./moj dom/PHOTO-2026-05-20-11-23-13.jpg"
+      "pl": "W holu wejściowym wykorzystano przestrzeń pod schodami na pojemną zabudowę do przechowywania. Dodatkowo przy wejściu zaprojektowano ukrytą spiżarnię, której drzwi wykonano z płyty meblowej, dzięki czemu całość sprawia wrażenie jednolitej zabudowy meblowej.",
+      "en": "In the entrance hall, the space under the stairs was used for generous built-in storage. A hidden pantry was also designed by the entrance, its door made of furniture board so that the whole reads as one uniform built-in unit.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-23-06.jpg",
+      "imgs": []
     },
     {
+      "pl": "Klatkę schodową podkreślają drewniane stopnie oraz balustrada wykonana z białych, pionowych metalowych rurek, które nadają wnętrzu lekkości i optycznie podkreślają jego wysokość.",
+      "en": "The staircase is defined by timber treads and a balustrade of white vertical metal rods, which lend the interior lightness and visually emphasise its height.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-23-00.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "Łazienka została zaprojektowana w bardziej wyrazistej kolorystyce. Ciemna podłoga oraz pionowy akcent dekoracyjny optycznie podwyższają pomieszczenie, a zielone płytki i drewniane detale oświetlenia nadają mu przytulny charakter. Całość uzupełniają dekoracyjne listwy LED oraz funkcjonalna zabudowa mieszcząca pralkę, suszarkę, kosz na pranie i blat roboczy.",
+      "en": "The bathroom was designed in a bolder palette. A dark floor and a vertical decorative accent visually heighten the room, while green tiles and timber lighting details give it a cosy character. Decorative LED strips and functional cabinetry housing the washing machine, dryer, laundry basket and worktop complete the space.",
+      "img": "./moj dom/PHOTO-2026-05-20-11-19-43.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "Projekt stanowi przykład kompleksowego prowadzenia inwestycji — od pierwszej koncepcji aż po finalną realizację. Poniżej wybrane rysunki techniczne: rzut i rozkład instalacji łazienki, rzut sypialni z zabudową szafy oraz projekt szafki podumywalkowej.",
+      "en": "The project exemplifies comprehensive management of an investment — from the first concept to final realisation. Below, selected technical drawings: the bathroom layout and services plan, the bedroom plan with wardrobe design, and the vanity unit design.",
+      "img": "",
       "imgs": [
-        "./moj dom/PHOTO-2026-05-20-11-19-14.jpg",
+        "./moj dom/_rysunki/rzut_lazienka.jpg",
+        "./moj dom/_rysunki/rzut_sypialnia.jpg",
+        "./moj dom/_rysunki/szafka_lazienka.jpg"
+      ]
+    },
+    {
+      "pl": "",
+      "en": "",
+      "img": "",
+      "imgs": [
         "./moj dom/PHOTO-2026-05-20-11-19-17.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-20.jpg",
         "./moj dom/PHOTO-2026-05-20-11-19-22.jpg",
         "./moj dom/PHOTO-2026-05-20-11-19-24.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-38.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-40.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-41.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-42.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-43.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-19-39.jpg",
         "./moj dom/PHOTO-2026-05-20-11-19-44.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-45.jpg",
         "./moj dom/PHOTO-2026-05-20-11-19-46.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-47.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-19-48.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-36.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-37.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-39.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-40.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-42.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-43.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-45.jpg",
         "./moj dom/PHOTO-2026-05-20-11-22-46.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-47.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-48.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-50.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-51.jpg",
         "./moj dom/PHOTO-2026-05-20-11-22-52.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-54.jpg",
         "./moj dom/PHOTO-2026-05-20-11-22-58.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-22-59.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-00.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-02.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-03.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-05.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-06.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-08.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-09.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-11.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-14.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-15.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-17.jpg",
-        "./moj dom/PHOTO-2026-05-20-11-23-20.jpg",
-        "./moj dom/lazienka_0.jpg",
-        "./moj dom/lazienka_1.jpg",
-        "./moj dom/lazienka_2.jpg",
-        "./moj dom/sypialnia_0.jpg"
+        "./moj dom/PHOTO-2026-05-20-11-23-13.jpg",
+        "./moj dom/PHOTO-2026-05-20-11-23-15.jpg"
       ]
     }
   ]

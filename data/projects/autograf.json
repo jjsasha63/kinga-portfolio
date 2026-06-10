@@ -1,0 +1,24 @@
+{
+  "id": "autograf",
+  "featured": false,
+  "badge_pl": "",
+  "badge_en": "",
+  "category_pl": "Wizualizacje",
+  "category_en": "Visualisations",
+  "title_pl": "Wizualizacje — Autograf Studio",
+  "title_en": "Visualisations — Autograf Studio",
+  "subtitle_pl": "Współpraca z biurem Autograf Studio",
+  "subtitle_en": "Collaboration with Autograf Studio",
+  "card_desc_pl": "Wizualizacje architektoniczne wykonane we współpracy z biurem Autograf Studio oraz ich publikacje.",
+  "card_desc_en": "Architectural visualisations created in collaboration with Autograf Studio, including their publications.",
+  "tags": "Wizualizacje, Autograf Studio, Publikacje",
+  "thumb": "",
+  "story": [
+    {
+      "pl": "Wizualizacje we współpracy z biurem Autograf Studio oraz ich publikacje.",
+      "en": "Visualisations in collaboration with Autograf Studio and their publications.",
+      "img": "",
+      "imgs": []
+    }
+  ]
+}

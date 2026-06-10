@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinga Trojan — Projektantka Wnętrz / Interior Designer</title>
+  <title>Kinga Trojan — Architektka &amp; Projektantka Wnętrz / Architect &amp; Interior Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
     /* ─── TOKENS ────────────────────────────────────────────────── */
     :root {
-      --bg:         #080808;
-      --bg2:        #0d0d0d;
-      --bg3:        #161616;
-      --border:     rgba(255,255,255,.065);
+      --bg:         #f6f2ed;
+      --bg2:        #efe9e1;
+      --bg3:        #e9e1d7;
+      --border:     rgba(26,24,24,.1);
       --accent:     #5872a4;   /* muted dusty cobalt */
       --accent2:    #405a8c;
-      --text:       #edeae5;
-      --muted:      #6a6560;
+      --text:       #1a1818;
+      --muted:      #6a645c;
       --bg-light:   #f6f2ed;
       --text-dark:  #1a1818;
       --muted-dark: #5a5550;
       --border-d:   rgba(0,0,0,.1);
-      --h-font:     'Cormorant Garamond', serif;
+      --h-font:     'Manrope', sans-serif;
       --b-font:     'Inter', sans-serif;
       --ui-font:    'Syne', sans-serif;
       --radius:     6px;
@@ -61,11 +61,24 @@
       transition: background var(--trans), border-bottom var(--trans);
     }
     nav.scrolled {
-      background: rgba(14,14,14,.92);
+      background: rgba(246,242,237,.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
+    .logo-mark {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px;
+      border: 1.5px solid var(--accent);
+      border-radius: 50%;
+      color: var(--accent);
+      font-family: var(--ui-font);
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .06em;
+      margin-right: .55rem;
+      flex-shrink: 0;
+    }
     .nav-logo {
+      display: flex; align-items: center;
       font-family: var(--h-font);
       font-size: 1.25rem;
       font-weight: 600;
@@ -131,18 +144,27 @@
     .hero-photo {
       width: 100%; height: 100%;
       object-fit: cover;
-      object-position: center 35%;
-      opacity: .38;
+      object-position: center 55%;
+      opacity: 1;
       display: block;
     }
     .hero-overlay {
       position: absolute; inset: 0;
       background: linear-gradient(
         160deg,
-        rgba(14,14,14,.55) 0%,
-        rgba(14,14,14,.1) 45%,
-        rgba(14,14,14,.92) 100%
+        rgba(246,242,237,.45) 0%,
+        rgba(246,242,237,.05) 40%,
+        rgba(246,242,237,.96) 100%
       );
+    }
+    .hero-blur {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      height: 42%;
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 72%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 72%);
+      pointer-events: none;
     }
     .hero-content { position: relative; z-index: 1; max-width: 820px; }
     .hero-eyebrow {
@@ -162,7 +184,7 @@
       color: var(--text);
       margin-bottom: 1rem;
     }
-    .hero-name em { font-style: italic; color: var(--accent); }
+    .hero-name em { font-style: normal; font-weight: 500; color: var(--accent); }
     .hero-sub {
       font-size: clamp(.95rem, 2vw, 1.15rem);
       font-weight: 300;
@@ -225,7 +247,7 @@
       letter-spacing: -.01em;
       margin-bottom: 2.25rem;
     }
-    .section-title em { font-style: italic; color: var(--accent); }
+    .section-title em { font-style: normal; font-weight: 500; color: var(--accent); }
 
     /* ─── ABOUT ──────────────────────────────────────────────────── */
     #about {
@@ -337,7 +359,7 @@
     .list-img-wrap::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(to right, rgba(8,8,8,.28) 0%, transparent 55%);
+      background: linear-gradient(to right, rgba(26,24,24,.14) 0%, transparent 55%);
       opacity: 0;
       transition: opacity .7s cubic-bezier(0.4, 0, 0.2, 1);
       pointer-events: none;
@@ -374,7 +396,7 @@
       border-right: 1px solid var(--border);
     }
     .list-item:nth-child(even) .list-img-wrap::after {
-      background: linear-gradient(to left, rgba(8,8,8,.28) 0%, transparent 55%);
+      background: linear-gradient(to left, rgba(26,24,24,.14) 0%, transparent 55%);
     }
     .list-num {
       font-family: var(--ui-font);
@@ -503,7 +525,7 @@
     /* ─── MODAL ──────────────────────────────────────────────────── */
     .modal-backdrop {
       position: fixed; inset: 0; z-index: 1000;
-      background: rgba(4,4,4,.82);
+      background: rgba(30,27,24,.5);
       backdrop-filter: blur(24px) saturate(0.8);
       -webkit-backdrop-filter: blur(24px) saturate(0.8);
       display: flex; align-items: flex-start;
@@ -696,6 +718,7 @@
       flex-wrap: wrap;
     }
     .footer-logo {
+      display: flex; align-items: center;
       font-family: var(--h-font);
       font-size: 1rem;
       font-weight: 600;
@@ -812,7 +835,7 @@
 
 <!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
 <nav id="main-nav">
-  <div class="nav-logo">Kinga <span>Trojan</span></div>
+  <div class="nav-logo"><span class="logo-mark">KT</span>Kinga <span>Trojan</span></div>
   <div class="nav-links">
     <a href="#about"     data-pl>O mnie</a>
     <a href="#about"     data-en>About</a>
@@ -827,12 +850,13 @@
 <!-- ═══ HERO ═══════════════════════════════════════════════════════ -->
 <section id="hero">
   <div class="hero-bg">
-    <img src="./kamienica/_img/p01_cropped.jpg" class="hero-photo" alt="" loading="eager" onerror="this.style.display='none'">
+    <img src="./praca magisterska/_img/p01_cropped.jpg" class="hero-photo" alt="" loading="eager" onerror="this.style.display='none'">
     <div class="hero-overlay"></div>
+    <div class="hero-blur"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-eyebrow" data-pl>Projektantka Wnętrz &amp; Architektka — Kraków</div>
-    <div class="hero-eyebrow" data-en>Interior Designer &amp; Architect — Kraków</div>
+    <div class="hero-eyebrow" data-pl>Architektka &amp; Projektantka Wnętrz — Kraków</div>
+    <div class="hero-eyebrow" data-en>Architect &amp; Interior Designer — Kraków</div>
     <h1 class="hero-name">Kinga <em>Trojan</em></h1>
     <p class="hero-sub" data-pl>Tworzę przestrzenie, które łączą estetykę z funkcją — od koncepcji po detal wykonawczy.</p>
     <p class="hero-sub" data-en>I create spaces where aesthetics and function meet — from concept to construction detail.</p>
@@ -849,15 +873,15 @@
     <div class="about-left">
       <div class="section-label" data-pl>O mnie</div>
       <div class="section-label" data-en>About</div>
-      <h2 class="section-title" data-pl>Projektantka <em>wnętrz</em><br>z pasją do detalu</h2>
-      <h2 class="section-title" data-en>Interior <em>designer</em><br>with an eye for detail</h2>
+      <h2 class="section-title" data-pl>Architektka i <em>projektantka wnętrz</em><br>z pasją do detalu</h2>
+      <h2 class="section-title" data-en>Architect &amp; <em>interior designer</em><br>with an eye for detail</h2>
       <div class="about-bio">
         <p data-pl><strong>Jestem projektantką wnętrz i architektką</strong> z wykształceniem z Politechniki Krakowskiej, gdzie w 2024 roku obroniłam pracę magisterską z wyróżnieniem. Łączę solidne podstawy techniczne z wrażliwością na estetykę i potrzeby użytkownika.</p>
         <p data-en><strong>I am an interior designer and architect</strong> educated at Cracow University of Technology, where I defended my master's thesis with distinction in 2024. I combine solid technical foundations with sensitivity to aesthetics and user needs.</p>
-        <p data-pl>Zawodowo specjalizuję się w projektowaniu wnętrz — od mieszkań i domów jednorodzinnych po przestrzenie usługowe i komercyjne. Doświadczenie zdobyte w pracowni <strong>Katarzyna Wnęk Innowacyjne Wnętrza</strong> pozwoliło mi rozwinąć umiejętności pracy z klientem, koordynacji projektu od koncepcji do realizacji oraz obsługi zaawansowanych narzędzi: Rhino 3D, V-Ray, SketchUp, Lumion.</p>
-        <p data-en>Professionally I specialise in interior design — from apartments and single-family homes to service and commercial spaces. Experience gained at the studio <strong>Katarzyna Wnęk Innowacyjne Wnętrza</strong> allowed me to develop skills in client communication, project coordination from concept to delivery, and advanced tools: Rhino 3D, V-Ray, SketchUp, Lumion.</p>
-        <p data-pl>Poszukuję możliwości pracy w kreatywnym studiu projektowym, gdzie będę mogła rozwijać się zarówno artystycznie, jak i technicznie, biorąc udział w realizacji wymagających projektów wnętrzarskich.</p>
-        <p data-en>I am looking for an opportunity in a creative design studio where I can grow both artistically and technically, contributing to demanding interior design projects.</p>
+        <p data-pl>Zawodowo realizuję projekty wnętrzarskie i architektoniczne — od mieszkań i domów jednorodzinnych po przestrzenie usługowe i obiekty użyteczności publicznej. Doświadczenie zdobyte w pracowni <strong>Katarzyna Wnęk Innowacyjne Wnętrza</strong> pozwoliło mi rozwinąć umiejętności pracy z klientem, koordynacji projektu od koncepcji do realizacji oraz obsługi zaawansowanych narzędzi: Rhino 3D, V-Ray, SketchUp, Lumion.</p>
+        <p data-en>Professionally I deliver both interior and architectural projects — from apartments and single-family homes to service spaces and public buildings. Experience gained at the studio <strong>Katarzyna Wnęk Innowacyjne Wnętrza</strong> allowed me to develop skills in client communication, project coordination from concept to delivery, and advanced tools: Rhino 3D, V-Ray, SketchUp, Lumion.</p>
+        <p data-pl>Poszukuję możliwości pracy zarówno w architekturze, jak i w projektowaniu wnętrz — chcę rozwijać się jako architektka, biorąc udział w realizacji wymagających projektów architektonicznych i wnętrzarskich.</p>
+        <p data-en>I am looking for opportunities in architecture as well as interior design — I want to grow as an architect, contributing to demanding architectural and interior projects.</p>
       </div>
     </div>
 
@@ -1016,7 +1040,7 @@
 
 <!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
 <footer>
-  <div class="footer-logo">Kinga Trojan</div>
+  <div class="footer-logo"><span class="logo-mark">KT</span>Kinga Trojan</div>
   <div class="footer-copy" data-pl>&copy; 2025 Kinga Trojan — Projektantka Wnętrz</div>
   <div class="footer-copy" data-en>&copy; 2025 Kinga Trojan — Interior Designer</div>
 </footer>
@@ -1518,7 +1542,7 @@ function renderList() {
 
     const thumbEl = p.thumb
       ? `<img class="list-main-img" src="${p.thumb}" alt="" loading="lazy" onerror="this.style.display='none'">`
-      : `<div style="width:100%;height:100%;background:${p.gradient||'#1a1a1a'}"></div>`;
+      : `<div style="width:100%;height:100%;background:${p.gradient||'#e9e1d7'}"></div>`;
 
     const num = String(i + 1).padStart(2, '0');
     // Preview thumbnail row — all unique images incl. main thumb
@@ -1579,10 +1603,10 @@ function openModal(idx) {
   if (p.thumb) {
     imgWrap.innerHTML = `<img class="modal-hero" src="${p.thumb}"
       alt="${en ? p.title_en : p.title_pl}"
-      onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=\\'modal-hero-placeholder\\' style=\\'background:${p.gradient||'#1a1a1a'}\\';></div>')"
+      onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<div class=\\'modal-hero-placeholder\\' style=\\'background:${p.gradient||'#e9e1d7'}\\';></div>')"
     />`;
   } else {
-    imgWrap.innerHTML = `<div class="modal-hero-placeholder" style="background:${p.gradient||'#1a1a1a'}"></div>`;
+    imgWrap.innerHTML = `<div class="modal-hero-placeholder" style="background:${p.gradient||'#e9e1d7'}"></div>`;
   }
 
   document.getElementById('modal-category').textContent = en ? p.category_en : p.category_pl;

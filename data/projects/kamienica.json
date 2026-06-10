@@ -7,26 +7,26 @@
   "category_en": "Architecture",
   "title_pl": "Kamienica Grzegórzecka",
   "title_en": "Grzegórzecka Tenement",
-  "subtitle_pl": "ul. Grzegórzecka 37, Kraków — Praca dyplomowa licencjacka, 2023",
-  "subtitle_en": "ul. Grzegórzecka 37, Kraków — Bachelor's Thesis, 2023",
+  "subtitle_pl": "ul. Grzegórzecka 37, Kraków — Praca dyplomowa inżynierska, 2023",
+  "subtitle_en": "ul. Grzegórzecka 37, Kraków — Engineering Diploma Thesis, 2023",
   "card_desc_pl": "Współczesna kamienica wpisana w historyczną zabudowę krakowskiej dzielnicy Grzegórzki.",
   "card_desc_en": "A contemporary tenement integrated into the historic streetscape of Kraków's Grzegórzki district.",
-  "tags": "Praca dyplomowa, Kraków, Residential, Mixed-use, Brick + Glass",
+  "tags": "Praca inżynierska, Kraków, Residential, Mixed-use, Brick + Lamele",
   "thumb": "./kamienica/_img/p01_cropped.jpg",
   "story": [
     {
-      "pl": "Praca dyplomowa licencjacka, Politechnika Krakowska 2023. Projekt zakłada narożną kamienicę przy ul. Grzegórzeckiej 37 — plombę wpisaną w historyczny rytm dzielnicy Grzegórzki. Cegła i pionowe żaluzje metalowe nawiązują do skali i materiałowości sąsiednich kamienic z przełomu XIX i XX w., zachowując jednocześnie wyraźnie współczesny wyraz.",
-      "en": "Bachelor's thesis, Cracow University of Technology 2023. The project proposes a corner tenement at ul. Grzegórzecka 37 — an infill building slotted into the historic rhythm of the Grzegórzki district. Brick and vertical metal fins reference the scale and materiality of neighbouring late-19th/early-20th-century buildings while maintaining a clearly contemporary expression.",
+      "pl": "Narożna kamienica przy ul. Grzegórzeckiej 37 to plomba uzupełniająca historyczny rytm zabudowy dzielnicy Grzegórzki. Projekt powstał jako praca dyplomowa inżynierska na Politechnice Krakowskiej (2023). Cegła oraz pionowe drewniane słupki typu lamel nawiązują do skali i materiałowości sąsiednich kamienic z przełomu XIX i XX wieku, zachowując jednocześnie wyraźnie współczesny wyraz.",
+      "en": "The corner tenement at 37 Grzegórzecka Street is an infill completing the historic rhythm of the Grzegórzki district. The project was developed as an engineering diploma thesis at the Cracow University of Technology (2023). Brick and vertical timber lamella posts reference the scale and materiality of the neighbouring late-19th/early-20th-century tenements while remaining distinctly contemporary.",
       "img": "./kamienica/_img/p01_cropped.jpg"
     },
     {
-      "pl": "Kluczowym elementem koncepcji jest dziedziniec. Szklana ściana tylna celowo eksponuje istniejący mural na murze sąsiedniego budynku — czyniąc z niego żywy element wnętrza podwórkowego. Na dachu zaprojektowano ogród z pergolą dla mieszkańców. Parter zajmuje lokal gastronomiczny z geometryczną czarno-białą posadzką, ceglaną ścianą i zielenią zwisającą z sufitu.",
-      "en": "The courtyard is the conceptual centrepiece. The glazed rear façade deliberately frames the mural on the adjacent building's wall, turning it into a living element of the courtyard. A pergola garden for residents crowns the roof. The ground floor houses a café with geometric black-and-white tiles, exposed brick, and hanging greenery.",
+      "pl": "Kluczowym elementem koncepcji jest dziedziniec. Szklana ściana tylna celowo eksponuje istniejący mural na murze sąsiedniego budynku — czyniąc z niego żywy element wnętrza podwórkowego. Na dachu zaprojektowano ogród z pergolą — prywatną przestrzeń należącą do ostatniego mieszkania. Parter zajmuje lokal gastronomiczny z geometryczną czarno-białą posadzką, ceglaną ścianą i zielenią zwisającą z sufitu.",
+      "en": "The courtyard is the conceptual centrepiece. The glazed rear façade deliberately exposes the existing mural on the neighbouring wall, turning it into a living element of the courtyard interior. The rooftop holds a pergola garden — a private space belonging to the top-floor apartment. The ground floor houses a restaurant with a geometric black-and-white floor, a brick wall and greenery suspended from the ceiling.",
       "img": "./kamienica/_img2/interior_3.jpg"
     },
     {
-      "pl": "Dziedziniec i dach stanowią odrębne przestrzenie — ogród na dachu z pergolą dla mieszkańców, szklana tylna elewacja celowo eksponująca mural sąsiedniego budynku jako żywy element wnętrza podwórkowego. Bryła narożna zachowuje pierzeje ulic, a jednocześnie tworzy intymną kieszeń zieleni w głębi kwartału.",
-      "en": "The courtyard and rooftop form distinct spaces — a pergola garden for residents above, and a glazed rear façade that deliberately frames the neighbouring building's mural as a living courtyard element. The corner volume maintains the street frontages while carving out an intimate green pocket within the block.",
+      "pl": "Dziedziniec i dach pełnią odmienne role: wspólny dziedziniec służy wszystkim mieszkańcom, natomiast ogród z pergolą na dachu pozostaje prywatną przestrzenią ostatniego mieszkania. Bryła narożna domyka pierzeje obu ulic, tworząc jednocześnie intymną kieszeń zieleni w głębi kwartału.",
+      "en": "The courtyard and the roof play different roles: the shared courtyard serves all residents, while the rooftop pergola garden remains the private space of the top-floor apartment. The corner massing completes both street frontages while creating an intimate pocket of greenery deep within the block.",
       "img": "./kamienica/_img2/interior_5.jpg"
     },
     {
