@@ -12,29 +12,29 @@
   "card_desc_pl": "Schronisko dla bezdomnych mężczyzn — humanistyczna architektura w sercu Krakowa.",
   "card_desc_en": "A shelter for homeless men — humanist architecture in the heart of Kraków.",
   "tags": "Praca magisterska, 2531 m², Kraków, Sustainable, Social architecture",
-  "thumb": "./praca magisterska/_img/p01_cropped.jpg",
+  "thumb": "/praca magisterska/_img/p01_cropped.jpg",
   "story": [
     {
       "pl": "Praca dyplomowa magisterska obroniona w 2024 roku na Politechnice Krakowskiej. Działka przy ul. Grzegórzeckiej 32 — w pobliżu Ronda Grzegórzeckiego, na terenie przez lata zdegradowanym, pozbawionym wartościowej zabudowy. Projekt odpowiada na realną potrzebę społeczną: schronisko dla bezdomnych mężczyzn oferujące godne warunki pobytu i program terapeutyczny.",
       "en": "Master's thesis defended in 2024 at Cracow University of Technology. The site at ul. Grzegórzecka 32 — near Grzegórzecki Roundabout, on land long degraded and lacking quality buildings. The project addresses a real social need: a shelter for homeless men offering dignified living conditions and a therapeutic programme.",
-      "img": "./praca magisterska/_img2/viz_garden.jpg"
+      "img": "/praca magisterska/_img2/viz_garden.jpg"
     },
     {
       "pl": "Budynek dwukondygnacyjny o pow. użytkowej 2531 m² zorganizowany wokół wewnętrznego dziedzińca — serca całego założenia, pełniącego funkcję przestrzeni wspólnej, terapeutycznej i integracyjnej. Parter: recepcja, gabinety medyczne, kuchnia społeczna, kaplica, pracownie warsztatowe, sale terapii, biblioteka. Piętro: pokoje mieszkalne (1-, 4- i 6-osobowe) i dodatkowe pracownie.",
       "en": "The two-storey building (2,531 m² usable area) is organised around an inner courtyard — the heart of the scheme, serving as communal, therapeutic and integration space. Ground floor: reception, medical rooms, social kitchen, chapel, craft workshops, therapy rooms and library. First floor: residential rooms (1-, 4- and 6-person) and additional workshops.",
-      "img": "./praca magisterska/_img2/int_greenhouse.jpg"
+      "img": "/praca magisterska/_img2/int_greenhouse.jpg"
     },
     {
       "pl": "Projekt wyróżnia dbałość o zrównoważone rozwiązania: zielony dach, kolektory słoneczne, wertykalny ogród fasadowy oraz staw retencyjny. Elewacja zestawia okładzinę drewnianą, kamień i białe żaluzje — spokojny, godny wyraz architektoniczny adekwatny do programu społecznego.",
       "en": "The project stands out for its sustainable solutions: a green roof, solar collectors, a vertical façade garden and a retention pond. The façade combines timber cladding, stone and white louvres — a calm, dignified architectural expression suited to the social programme.",
-      "img": "./praca magisterska/_img2/axo_roof.jpg"
+      "img": "/praca magisterska/_img2/axo_roof.jpg"
     },
     {
       "imgs": [
-        "./praca magisterska/_img2/int_common.jpg",
-        "./praca magisterska/_img2/int_dayroom.jpg",
-        "./praca magisterska/_img2/viz_lavender.jpg",
-        "./praca magisterska/_img2/elevations.jpg"
+        "/praca magisterska/_img2/int_common.jpg",
+        "/praca magisterska/_img2/int_dayroom.jpg",
+        "/praca magisterska/_img2/viz_lavender.jpg",
+        "/praca magisterska/_img2/elevations.jpg"
       ]
     }
   ]

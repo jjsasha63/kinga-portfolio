@@ -31,7 +31,16 @@
       var thumb    = e.getIn(['data','thumb']);
       var tagsRaw  = e.getIn(['data','tags']);
       var story    = e.getIn(['data','story']);
-      var thumbSrc = thumb ? get(thumb).toString() : null;
+      /* site-root paths (/folder/img.jpg) load directly on the same domain;
+         only media-library uploads need getAsset resolution */
+      var resolve  = function (p) {
+        if (!p) return null;
+        var s = String(p);
+        if (s.charAt(0) === '/' && s.indexOf('/uploads/') !== 0) return s;
+        var a = get(s);
+        return a ? a.toString() : s;
+      };
+      var thumbSrc = resolve(thumb);
 
       /* Normalise tags — now a comma-separated string */
       var tagList = [];
@@ -48,13 +57,13 @@
         story.forEach(function(block) {
           var img = block.get('img');
           if (img) {
-            var src = get(img).toString();
+            var src = resolve(img);
             if (src) storyImgs.push(src);
           }
           var imgs = block.get('imgs');
           if (imgs && imgs.size) {
             imgs.forEach(function(i) {
-              var src2 = get(i).toString();
+              var src2 = resolve(i);
               if (src2) storyImgs.push(src2);
             });
           }

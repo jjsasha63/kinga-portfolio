@@ -10,39 +10,39 @@
   "card_desc_pl": "Motel w krajobrazie Podhala — regionalizm, zielone dachy i spa z krytym basenem.",
   "card_desc_en": "A motel in the Podhale landscape — regionalism, green roofs and a spa with indoor pool.",
   "tags": "Hospitality, Podhale, Projekt akademicki, Regionalizm, SPA",
-  "thumb": "./motel/_img2/views_4.jpg",
+  "thumb": "/motel/_img2/views_4.jpg",
   "story": [
     {
       "pl": "Motel w Nowym Targu — projekt akademicki, Politechnika Krakowska, Rok III, Zespół Architektury Współczesnego Regionalizmu. Obiekt osadzony w podhalańskim krajobrazie: niskie poziome bryły wtopione w rozległą zieleń, zielone dachy integrujące budynek z terenem. Elewacje łączą cegłę, tynk i czarną stal — materiały nawiązujące do regionalnej tradycji budowlanej.",
       "en": "Motel in Nowy Targ — academic project, Cracow University of Technology, Year III, Contemporary Regionalism studio. The building is embedded in the Podhale landscape: low horizontal volumes nestled in open greenery, green roofs integrating the building with the terrain. Façades combine brick, render and black steel — materials referencing regional building tradition.",
-      "img": "./motel/_img2/views_1.jpg"
+      "img": "/motel/_img2/views_1.jpg"
     },
     {
       "pl": "Strefa SPA z krytym basenem stanowi serce obiektu — basen otoczony panoramicznym przeszkleniem, zielona ściana, terrazzo, subtelne neonowe akcenty. Ponadto: recepcja, restauracja i pokoje gościnne ze spokojnym, eleganckimi wykończeniem.",
       "en": "The indoor SPA with pool is the heart of the building — surrounded by panoramic glazing, a green feature wall, terrazzo floors and subtle neon accents. Also: reception, restaurant and guest rooms with calm, elegant finishes.",
-      "img": "./motel/_img2/details_1.jpg"
+      "img": "/motel/_img2/details_1.jpg"
     },
     {
       "pl": "Bryła rozkłada się poziomo wzdłuż działki, akcentując panoramę Tatr. Dokumentacja: rzut parteru 1:200, rzut I piętra, elewacje z widokiem na wzgórze, przekroje i pełen pakiet wizualizacji Lumion.",
       "en": "The massing stretches horizontally along the plot, framing the Tatra panorama. Documentation: ground floor plan 1:200, first floor plan, elevations set against the hillside, sections and full Lumion visualisation package.",
-      "img": "./motel/_img2/elevations_1.jpg"
+      "img": "/motel/_img2/elevations_1.jpg"
     },
     {
       "imgs": [
-        "./motel/_img2/views_3.jpg",
-        "./motel/_img2/details_2.jpg",
-        "./motel/_img2/details_3.jpg",
-        "./motel/_img2/details_4.jpg",
-        "./motel/_img2/details_5.jpg",
-        "./motel/_img2/details_6.jpg",
-        "./motel/_img2/elevations_2.jpg",
-        "./motel/_img2/elevations_3.jpg",
-        "./motel/_img2/sections_3.jpg",
-        "./motel/_img2/cover_2.jpg",
-        "./motel/_img2/elev_north.jpg",
-        "./motel/_img2/elev_south.jpg",
-        "./motel/_img2/elev_east.jpg",
-        "./motel/_img2/elev_west.jpg"
+        "/motel/_img2/views_3.jpg",
+        "/motel/_img2/details_2.jpg",
+        "/motel/_img2/details_3.jpg",
+        "/motel/_img2/details_4.jpg",
+        "/motel/_img2/details_5.jpg",
+        "/motel/_img2/details_6.jpg",
+        "/motel/_img2/elevations_2.jpg",
+        "/motel/_img2/elevations_3.jpg",
+        "/motel/_img2/sections_3.jpg",
+        "/motel/_img2/cover_2.jpg",
+        "/motel/_img2/elev_north.jpg",
+        "/motel/_img2/elev_south.jpg",
+        "/motel/_img2/elev_east.jpg",
+        "/motel/_img2/elev_west.jpg"
       ]
     }
   ]
