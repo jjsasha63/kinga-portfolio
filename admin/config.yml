@@ -170,9 +170,5 @@ collections:
         fields:
           - label: "Kolejność"
             name: order
-            widget: list
-            hint: "Przeciągnij, aby zmienić kolejność. Każda pozycja musi dokładnie odpowiadać ID projektu. Projekty pokazują się na stronie w tej kolejności."
-            field:
-              label: "ID projektu"
-              name: id
-              widget: string
+            widget: projectOrder
+            hint: "Projekty pokazują się na stronie głównej w tej kolejności."

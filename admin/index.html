@@ -171,6 +171,121 @@
   CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@500;600&family=Inter:wght@300;400;500&display=swap');
 
   /* ─────────────────────────────────────────────────────────────
+     KOLEJNOŚĆ PROJEKTÓW — widżet z kartami i przeciąganiem
+  ───────────────────────────────────────────────────────────── */
+  var OrderControl = createClass({
+    getInitialState: function () {
+      return { tick: 0, dragIdx: null, overIdx: null };
+    },
+    componentDidMount: function () { this._meta = {}; this.loadMeta(); },
+    componentDidUpdate: function () { this.loadMeta(); },
+    ids: function () {
+      var v = this.props.value;
+      return v && v.toJS ? v.toJS() : (v || []);
+    },
+    loadMeta: function () {
+      var self = this;
+      if (!this._meta) this._meta = {};
+      this.ids().forEach(function (id) {
+        if (self._meta[id] !== undefined) return;
+        self._meta[id] = null;
+        fetch('/data/projects/' + encodeURIComponent(id) + '.json')
+          .then(function (r) { return r.ok ? r.json() : { missing: true }; })
+          .catch(function () { return { missing: true }; })
+          .then(function (p) {
+            self._meta[id] = p;
+            self.setState({ tick: self.state.tick + 1 });
+          });
+      });
+    },
+    move: function (from, to) {
+      var v = this.props.value;
+      if (!v || from === to || to < 0 || to >= v.size) return;
+      var item = v.get(from);
+      this.props.onChange(v.delete(from).insert(to, item));
+    },
+    removeAt: function (i) {
+      var id = this.props.value.get(i);
+      if (window.confirm('Usunąć „' + id + '" z kolejności? Projekt zniknie ze strony (plik projektu zostaje).')) {
+        this.props.onChange(this.props.value.delete(i));
+      }
+    },
+    render: function () {
+      var self = this;
+      var ids = this.ids();
+
+      var cards = ids.map(function (id, i) {
+        var p = (self._meta || {})[id];
+        var missing = p && p.missing;
+        var thumb = p && p.thumb ? p.thumb : null;
+        var isOver = self.state.overIdx === i && self.state.dragIdx !== null && self.state.dragIdx !== i;
+
+        function iconBtn(label, txt, onClick, danger) {
+          return h('button', { type: 'button', title: label, onClick: onClick,
+            style: { border: 'none', background: 'none', cursor: 'pointer', fontSize: '1rem',
+              padding: '0.3rem 0.45rem', borderRadius: '4px', color: danger ? '#b3403a' : '#5a5550',
+              lineHeight: 1 } }, txt);
+        }
+
+        return h('div', {
+            key: id + i,
+            draggable: true,
+            onDragStart: function (e) { e.dataTransfer.setData('text/plain', String(i)); self.setState({ dragIdx: i }); },
+            onDragOver:  function (e) { e.preventDefault(); if (self.state.overIdx !== i) self.setState({ overIdx: i }); },
+            onDrop:      function (e) { e.preventDefault(); self.move(self.state.dragIdx, i); self.setState({ dragIdx: null, overIdx: null }); },
+            onDragEnd:   function ()  { self.setState({ dragIdx: null, overIdx: null }); },
+            style: {
+              display: 'flex', alignItems: 'center', gap: '0.75rem',
+              padding: '0.5rem 0.75rem', marginBottom: '6px',
+              background: '#fff', border: '1px solid ' + (isOver ? '#5872a4' : 'rgba(0,0,0,.12)'),
+              borderRadius: '8px', cursor: 'grab', userSelect: 'none',
+              boxShadow: isOver ? '0 0 0 2px rgba(88,114,164,.25)' : 'none',
+              opacity: self.state.dragIdx === i ? 0.45 : 1
+            }
+          },
+          h('span', { title: 'Przeciągnij, aby zmienić kolejność',
+            style: { fontSize: '1.05rem', color: '#9a948c', cursor: 'grab', padding: '0 0.15rem' } }, '⠿'),
+          h('span', { style: { fontFamily: 'Syne, sans-serif', fontSize: '0.7rem', fontWeight: 600,
+            color: '#5872a4', width: '1.4rem', textAlign: 'center' } }, String(i + 1)),
+          thumb
+            ? h('img', { src: thumb, style: { width: '64px', height: '48px', objectFit: 'cover',
+                borderRadius: '4px', flexShrink: 0, pointerEvents: 'none' } })
+            : h('div', { style: { width: '64px', height: '48px', borderRadius: '4px', background: '#ede9e3',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.7rem',
+                color: '#9a948c', flexShrink: 0 } }, missing ? '⚠️' : '…'),
+          h('div', { style: { flex: 1, minWidth: 0 } },
+            h('div', { style: { fontSize: '0.85rem', fontWeight: 500, color: missing ? '#b3403a' : '#1a1818',
+              whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' } },
+              missing ? 'Nie znaleziono projektu!' : ((p && p.title_pl) || id)),
+            h('div', { style: { fontSize: '0.68rem', color: '#9a948c' } }, id)
+          ),
+          iconBtn('Przenieś wyżej',  '↑', function () { self.move(i, i - 1); }),
+          iconBtn('Przenieś niżej',  '↓', function () { self.move(i, i + 1); }),
+          iconBtn('Usuń z kolejności', '✕', function () { self.removeAt(i); }, true)
+        );
+      });
+
+      return h('div', { id: this.props.forID, className: this.props.classNameWrapper,
+          style: { background: '#faf8f5', padding: '0.75rem', borderRadius: '8px' } },
+        h('p', { style: { fontSize: '0.74rem', color: '#5a5550', margin: '0 0 0.75rem' } },
+          'Przeciągnij karty (lub użyj strzałek), aby ustawić kolejność projektów na stronie głównej.'),
+        cards
+      );
+    }
+  });
+
+  var OrderPreview = createClass({
+    render: function () {
+      var v = this.props.value;
+      var ids = v && v.toJS ? v.toJS() : (v || []);
+      return h('ol', { style: { fontFamily: 'Inter, sans-serif', fontSize: '0.85rem', padding: '1.5rem 2.5rem' } },
+        ids.map(function (id, i) { return h('li', { key: i }, id); }));
+    }
+  });
+
+  CMS.registerWidget('projectOrder', OrderControl, OrderPreview);
+
+  /* ─────────────────────────────────────────────────────────────
      STYL PANELU — kolory marki zamiast domyślnego niebieskiego
   ───────────────────────────────────────────────────────────── */
   function injectShellStyles () {
@@ -188,14 +303,37 @@
       /* karty wpisów — delikatny hover */
       '[class*="ListCard"]:hover,[class*="card"]:hover{box-shadow:0 2px 12px rgba(88,114,164,.18)!important;}',
       /* zaznaczenia / focus pól */
-      'input:focus,textarea:focus{border-color:#5872a4!important;box-shadow:0 0 0 2px rgba(88,114,164,.2)!important;}'
+      'input:focus,textarea:focus{border-color:#5872a4!important;box-shadow:0 0 0 2px rgba(88,114,164,.2)!important;}',
+      /* kontrolki pozycji listy (sekcje, zdjęcia galerii) — widoczne, nie ukryte ikonki */
+      '[class*="ListItemTopBar"]{background:#f0ece6!important;border-radius:6px 6px 0 0;}',
+      '[class*="ListItemTopBar"] button svg,[class*="ListItemTopBar"] [aria-roledescription="sortable"] svg{width:18px!important;height:18px!important;}',
+      '[class*="ListItemTopBar"] button:last-of-type{color:#b3403a!important;}',
+      '[class*="ListItemTopBar"] button:last-of-type:hover{background:rgba(179,64,58,.12)!important;border-radius:4px;}',
+      '[class*="ListItemTopBar"] [aria-roledescription="sortable"]{cursor:grab!important;color:#5872a4!important;padding:0 4px;}',
+      '[class*="ListItemTopBar"] [aria-roledescription="sortable"]:hover{background:rgba(88,114,164,.12);border-radius:4px;}'
     ].join('\n');
     document.head.appendChild(s);
   }
+
+  /* polskie podpowiedzi na ikonkach listy (rozwiń / przeciągnij / usuń) */
+  function labelListControls () {
+    document.querySelectorAll('[class*="ListItemTopBar"]').forEach(function (bar) {
+      if (bar.dataset.ktLabeled) return;
+      bar.dataset.ktLabeled = '1';
+      var btns = bar.querySelectorAll('button');
+      if (btns[0]) btns[0].title = 'Rozwiń / zwiń';
+      var drag = bar.querySelector('[aria-roledescription="sortable"]');
+      if (drag) drag.title = 'Przeciągnij, aby zmienić kolejność';
+      if (btns.length > 1) btns[btns.length - 1].title = 'Usuń';
+    });
+  }
+
   /* obserwator zamiast sztywnych timeoutów — styl trafia także po
      przełączeniu widoków, gdy Decap przerysuje interfejs */
   injectShellStyles();
-  new MutationObserver(injectShellStyles).observe(document.body, { childList: true });
+  labelListControls();
+  new MutationObserver(function () { injectShellStyles(); labelListControls(); })
+    .observe(document.body, { childList: true, subtree: true });
 
 })();
 </script>
