@@ -1,167 +1,201 @@
 <!doctype html>
-<html>
+<html lang="pl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>Portfolio Admin — Kinga Trojan</title>
+  <title>Panel portfolio — Kinga Trojan</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Inter:wght@300;400;500&family=Syne:wght@500;600&display=swap" rel="stylesheet">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Syne:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script type="module">
+  /* Polish UI for the whole CMS shell (config.yml sets locale: pl) */
+  import pl from 'https://unpkg.com/decap-cms-locales@3.6.0/dist/esm/pl/index.js';
+  if (window.CMS) window.CMS.registerLocale('pl', pl);
+</script>
 <script>
 (function () {
 
   /* ─────────────────────────────────────────────────────────────
-     LIVE PREVIEW — light warm theme matching the portfolio modal
+     LIVE PREVIEW — pełny widok projektu, jak na stronie
   ───────────────────────────────────────────────────────────── */
+  var c = {
+    bg:      '#f6f2ed',
+    bg2:     '#ede9e3',
+    bg3:     'rgba(0,0,0,.045)',
+    text:    '#1a1818',
+    muted:   '#5a5550',
+    border:  'rgba(0,0,0,.09)',
+    accent:  '#5872a4',
+    accent2: '#405a8c',
+    ui:      'Syne, sans-serif',
+    head:    'Manrope, sans-serif',
+    body:    'Inter, sans-serif'
+  };
+
+  function sectionLabel(text) {
+    return h('p', { style: { fontSize: '0.62rem', letterSpacing: '0.2em', textTransform: 'uppercase',
+      color: c.muted, fontFamily: c.ui, margin: '2.5rem 0 0.75rem' } }, text);
+  }
+
   var ProjectPreview = createClass({
     render: function () {
       var e   = this.props.entry;
       var get = this.props.getAsset;
+
+      /* Ścieżki /folder/zdjecie.jpg działają wprost na tej samej domenie;
+         tylko nowe pliki z /uploads potrzebują getAsset */
+      function resolve(p) {
+        if (!p) return null;
+        var s = String(p);
+        if (s.charAt(0) === '/' && s.indexOf('/uploads/') !== 0) return s;
+        var a = get(s);
+        return a ? a.toString() : s;
+      }
 
       var title    = e.getIn(['data','title_pl'])    || 'Tytuł projektu';
       var cat      = e.getIn(['data','category_pl']) || 'Kategoria';
       var subtitle = e.getIn(['data','subtitle_pl']) || '';
       var desc     = e.getIn(['data','card_desc_pl'])|| '';
       var featured = e.getIn(['data','featured']);
-      var badge    = e.getIn(['data','badge_pl'])    || 'Wyróżniony projekt';
-      var thumb    = e.getIn(['data','thumb']);
+      var badge    = e.getIn(['data','badge_pl']);
+      var thumbSrc = resolve(e.getIn(['data','thumb']));
       var tagsRaw  = e.getIn(['data','tags']);
       var story    = e.getIn(['data','story']);
-      /* site-root paths (/folder/img.jpg) load directly on the same domain;
-         only media-library uploads need getAsset resolution */
-      var resolve  = function (p) {
-        if (!p) return null;
-        var s = String(p);
-        if (s.charAt(0) === '/' && s.indexOf('/uploads/') !== 0) return s;
-        var a = get(s);
-        return a ? a.toString() : s;
-      };
-      var thumbSrc = resolve(thumb);
+      var video    = e.getIn(['data','video']);
 
-      /* Normalise tags — now a comma-separated string */
       var tagList = [];
       if (typeof tagsRaw === 'string' && tagsRaw.trim()) {
         tagList = tagsRaw.split(',').map(function(t){ return t.trim(); }).filter(Boolean);
-      } else if (tagsRaw && tagsRaw.size) {
-        /* legacy list format */
-        tagsRaw.forEach(function(t){ tagList.push(typeof t === 'string' ? t : (t.get && t.get('tag')) || ''); });
       }
 
-      /* Collect story images for the strip */
-      var storyImgs = [];
+      /* ── karta projektu (strona główna) ── */
+      var card = h('div', { style: { maxWidth: '860px', border: '1px solid ' + c.border, background: '#fff',
+          display: 'grid', gridTemplateColumns: '58% 42%' } },
+        h('div', { style: { position: 'relative', overflow: 'hidden', aspectRatio: '4/3', background: c.bg2 } },
+          (featured && badge) ? h('div', { style: { position: 'absolute', top: '1rem', left: '1rem',
+            background: c.accent, color: '#fff', fontFamily: c.ui, fontSize: '0.56rem', fontWeight: 600,
+            letterSpacing: '0.14em', textTransform: 'uppercase', padding: '0.28rem 0.7rem',
+            borderRadius: '100px', zIndex: 2 } }, badge) : null,
+          thumbSrc
+            ? h('img', { src: thumbSrc, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } })
+            : h('div', { style: { width: '100%', height: '100%', display: 'flex', alignItems: 'center',
+                justifyContent: 'center', color: c.muted, fontSize: '0.8rem', flexDirection: 'column', gap: '0.5rem' } },
+                h('span', { style: { fontSize: '1.5rem' } }, '🖼'),
+                h('span', null, 'Dodaj zdjęcie główne'))
+        ),
+        h('div', { style: { padding: '2rem 1.75rem', display: 'flex', flexDirection: 'column', gap: '0.5rem',
+            borderLeft: '1px solid ' + c.border } },
+          h('div', { style: { color: c.accent, fontSize: '0.6rem', letterSpacing: '0.18em',
+            textTransform: 'uppercase', fontFamily: c.ui, fontWeight: 600 } }, cat),
+          h('h2',  { style: { fontFamily: c.head, fontSize: '1.7rem', fontWeight: 300, color: c.text,
+            margin: 0, lineHeight: 1.1 } }, title),
+          h('div', { style: { fontSize: '0.7rem', color: c.muted, lineHeight: 1.5 } }, subtitle),
+          h('p',   { style: { fontSize: '0.8rem', color: c.text, opacity: 0.75, lineHeight: 1.6, margin: 0 } }, desc),
+          tagList.length
+            ? h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '0.3rem', marginTop: '0.1rem' } },
+                tagList.map(function (t, i) {
+                  return h('span', { key: i, style: { fontFamily: c.ui, fontSize: '0.54rem', letterSpacing: '0.08em',
+                    textTransform: 'uppercase', padding: '0.2rem 0.6rem', border: '1px solid ' + c.border,
+                    borderRadius: '100px', color: c.muted } }, t);
+                }))
+            : null,
+          h('div', { style: { fontSize: '0.64rem', fontFamily: c.ui, fontWeight: 500, color: c.accent,
+            marginTop: '0.25rem' } }, 'Otwórz projekt →')
+        )
+      );
+
+      /* ── sekcje treści (widok szczegółowy) ── */
+      var blocks = [];
       if (story && story.size) {
-        story.forEach(function(block) {
-          var img = block.get('img');
-          if (img) {
-            var src = resolve(img);
-            if (src) storyImgs.push(src);
-          }
+        story.forEach(function (block, bi) {
+          var text = block.get('pl');
+          var img  = resolve(block.get('img'));
           var imgs = block.get('imgs');
-          if (imgs && imgs.size) {
-            imgs.forEach(function(i) {
-              var src2 = resolve(i);
-              if (src2) storyImgs.push(src2);
-            });
+
+          if (text && img) {
+            var flip = bi % 2 === 1;
+            blocks.push(h('div', { key: 'b'+bi, style: { display: 'grid', gridTemplateColumns: '1fr 1fr',
+                gap: '1.5rem', alignItems: 'center', padding: '1.5rem 0', borderBottom: '1px solid ' + c.border } },
+              h('p',  { style: { fontSize: '0.82rem', fontWeight: 300, color: c.text, lineHeight: 1.8,
+                margin: 0, order: flip ? 2 : 1 } }, text),
+              h('img', { src: img, style: { width: '100%', aspectRatio: '4/3', objectFit: 'cover',
+                borderRadius: '6px', order: flip ? 1 : 2 } })
+            ));
+          } else if (text) {
+            blocks.push(h('p', { key: 'b'+bi, style: { fontSize: '0.82rem', fontWeight: 300, color: c.text,
+              lineHeight: 1.8, padding: '1.25rem 0', borderBottom: '1px solid ' + c.border, margin: 0 } }, text));
+          }
+
+          var gallery = [];
+          if (img && !text) gallery.push(img);
+          if (imgs && imgs.size) imgs.forEach(function (i) { var s = resolve(i); if (s) gallery.push(s); });
+          if (gallery.length) {
+            blocks.push(h('div', { key: 'g'+bi, style: { display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '2px', margin: '1.25rem 0' } },
+              gallery.map(function (s, i) {
+                return h('img', { key: i, src: s, style: { width: '100%', aspectRatio: '4/3', objectFit: 'cover' } });
+              })));
           }
         });
       }
 
-      /* Light warm palette — matches portfolio modal / about section */
-      var c = {
-        bg:      '#f6f2ed',
-        bg2:     '#ede9e3',
-        text:    '#1a1818',
-        muted:   '#5a5550',
-        border:  'rgba(0,0,0,.09)',
-        accent:  '#5872a4',
-        accent2: '#405a8c',
-      };
+      return h('div', { style: { background: c.bg, minHeight: '100vh', padding: '2rem',
+          fontFamily: c.body, color: c.text } },
 
-      return h('div', { style: { background: c.bg, minHeight: '100vh', padding: '2rem', fontFamily: 'Inter, sans-serif' } },
+        sectionLabel('↓ Tak wygląda karta projektu na stronie głównej'),
+        card,
 
-        /* ── preview label ── */
-        h('p', { style: { fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: c.muted, fontFamily: 'Syne, sans-serif', marginBottom: '1.5rem' } },
-          '↓ Podgląd — karta projektu na stronie głównej'
-        ),
+        blocks.length ? sectionLabel('↓ Tak wygląda treść projektu po otwarciu') : null,
+        blocks.length
+          ? h('div', { style: { maxWidth: '860px', background: '#fff', border: '1px solid ' + c.border,
+              padding: '1.5rem 2rem' } }, blocks)
+          : null,
 
-        /* ── project card ── */
-        h('div', { style: { maxWidth: '820px', border: '1px solid ' + c.border, background: '#fff', display: 'grid', gridTemplateColumns: '62% 38%', marginBottom: '2rem' } },
+        video ? h('p', { style: { maxWidth: '860px', marginTop: '1rem', fontSize: '0.75rem', color: c.muted } },
+            '🎬 Ten projekt ma podpięte wideo — pokaże się na końcu widoku projektu.') : null,
 
-          /* image side */
-          h('div', { style: { position: 'relative', overflow: 'hidden', aspectRatio: '4/3', background: c.bg2 } },
-            featured ? h('div', { style: { position: 'absolute', top: '1rem', left: '1rem', background: c.accent, color: '#fff', fontFamily: 'Syne, sans-serif', fontSize: '0.56rem', fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', padding: '0.28rem 0.7rem', borderRadius: '100px', zIndex: 2 } }, badge) : null,
-            thumbSrc
-              ? h('img', { src: thumbSrc, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } })
-              : h('div', { style: { width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: c.muted, fontSize: '0.8rem', flexDirection: 'column', gap: '0.5rem' } },
-                  h('span', { style: { fontSize: '1.5rem' } }, '🖼'),
-                  h('span', null, 'Dodaj zdjęcie główne')
-                )
-          ),
-
-          /* info side */
-          h('div', { style: { padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', gap: '0.55rem', borderLeft: '1px solid ' + c.border } },
-            h('div', { style: { color: c.accent, fontSize: '0.62rem', letterSpacing: '0.18em', textTransform: 'uppercase', fontFamily: 'Syne, sans-serif', fontWeight: 600 } }, cat),
-            h('h2',  { style: { fontFamily: 'Manrope, sans-serif', fontSize: '2rem', fontWeight: 300, color: c.text, margin: 0, lineHeight: 1.05 } }, title),
-            h('div', { style: { fontSize: '0.72rem', color: c.muted, lineHeight: 1.55 } }, subtitle),
-            h('p',   { style: { fontSize: '0.85rem', color: c.text, opacity: 0.75, lineHeight: 1.65, margin: 0 } }, desc),
-            tagList.length
-              ? h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.15rem' } },
-                  tagList.map(function (t, i) {
-                    return h('span', { key: i, style: { fontFamily: 'Syne, sans-serif', fontSize: '0.56rem', letterSpacing: '0.08em', textTransform: 'uppercase', padding: '0.22rem 0.65rem', border: '1px solid ' + c.border, borderRadius: '100px', color: c.muted } }, t);
-                  })
-                )
-              : null,
-            h('div', { style: { fontSize: '0.67rem', fontFamily: 'Syne, sans-serif', fontWeight: 500, color: c.accent, marginTop: '0.3rem' } }, 'Otwórz projekt →')
-          )
-        ),
-
-        /* ── story image strip (if any images uploaded) ── */
-        storyImgs.length ? h('div', { style: { maxWidth: '820px', marginBottom: '2rem' } },
-          h('p', { style: { fontSize: '0.6rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: c.muted, fontFamily: 'Syne, sans-serif', marginBottom: '0.6rem' } },
-            'Zdjęcia w treści projektu (' + storyImgs.length + ')'
-          ),
-          h('div', { style: { display: 'flex', gap: '4px', overflowX: 'auto', scrollbarWidth: 'none' } },
-            storyImgs.map(function(src, i) {
-              return h('img', { key: i, src: src, style: { height: '120px', width: 'auto', objectFit: 'cover', flexShrink: 0, border: '1px solid ' + c.border } });
-            })
-          )
-        ) : null,
-
-        /* ── tip ── */
-        h('div', { style: { maxWidth: '820px', padding: '1rem 1.25rem', background: 'rgba(88,114,164,.07)', border: '1px solid rgba(88,114,164,.18)', borderRadius: '6px', fontSize: '0.78rem', color: c.muted, lineHeight: 1.6 } },
+        h('div', { style: { maxWidth: '860px', margin: '2rem 0 0', padding: '0.9rem 1.1rem',
+            background: 'rgba(88,114,164,.07)', border: '1px solid rgba(88,114,164,.18)',
+            borderRadius: '6px', fontSize: '0.74rem', color: c.muted, lineHeight: 1.6 } },
           h('strong', { style: { color: c.accent, fontWeight: 500 } }, 'Wskazówka: '),
-          'Podgląd aktualizuje się na żywo po każdej zmianie. Kliknij "Save" a strona odświeży się automatycznie po ok. 30 sekundach.'
-        )
+          'podgląd odświeża się na żywo podczas pisania. Po kliknięciu „Opublikuj" strona zaktualizuje się w ciągu ok. 1 minuty.')
       );
     }
   });
 
   CMS.registerPreviewTemplate('projects', ProjectPreview);
-
-  /* Load portfolio fonts inside the preview iframe */
-  CMS.registerPreviewStyle(
-    'https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@500;600&family=Inter:wght@300;400;500&display=swap'
-  );
+  CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Syne:wght@500;600&family=Inter:wght@300;400;500&display=swap');
 
   /* ─────────────────────────────────────────────────────────────
-     INJECT COBALT ACCENT INTO CMS SHELL BUTTONS
+     STYL PANELU — kolory marki zamiast domyślnego niebieskiego
   ───────────────────────────────────────────────────────────── */
   function injectShellStyles () {
     if (document.getElementById('kt-cms-styles')) return;
     var s = document.createElement('style');
     s.id = 'kt-cms-styles';
     s.textContent = [
+      /* przyciski główne */
       'button[class*="primary"],a[class*="primary"]{background:#5872a4!important;border-color:#5872a4!important;color:#fff!important;}',
-      'button[class*="primary"]:hover{background:#405a8c!important;}',
+      'button[class*="primary"]:hover,a[class*="primary"]:hover{background:#405a8c!important;}',
+      /* aktywna nawigacja */
       '[class*="NavLink"][class*="active"],[class*="nav"][class*="active"]{color:#5872a4!important;border-color:#5872a4!important;}',
-    ].join('');
+      /* tło listy wpisów w cieplejszym tonie */
+      '[class*="AppMainContainer"]{background:#faf8f5;}',
+      /* karty wpisów — delikatny hover */
+      '[class*="ListCard"]:hover,[class*="card"]:hover{box-shadow:0 2px 12px rgba(88,114,164,.18)!important;}',
+      /* zaznaczenia / focus pól */
+      'input:focus,textarea:focus{border-color:#5872a4!important;box-shadow:0 0 0 2px rgba(88,114,164,.2)!important;}'
+    ].join('\n');
     document.head.appendChild(s);
   }
-  [500, 1500, 3000].forEach(function (ms) { setTimeout(injectShellStyles, ms); });
+  /* obserwator zamiast sztywnych timeoutów — styl trafia także po
+     przełączeniu widoków, gdy Decap przerysuje interfejs */
+  injectShellStyles();
+  new MutationObserver(injectShellStyles).observe(document.body, { childList: true });
 
 })();
 </script>

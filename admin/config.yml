@@ -2,9 +2,11 @@ backend:
   name: git-gateway
   branch: master
 
-# Only used when the site is opened on localhost with `npx decap-server` running;
-# ignored in production.
+# Działa tylko lokalnie (localhost + `npx decap-server`); w produkcji ignorowane.
 local_backend: true
+
+# Polski interfejs panelu (locale rejestrowane w admin/index.html)
+locale: "pl"
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -15,151 +17,162 @@ logo_url: "https://kinga-trojan.netlify.app/apple-touch-icon.png"
 
 collections:
 
-  # ── PROJECTS ──────────────────────────────────────────────────
+  # ── PROJEKTY ──────────────────────────────────────────────────
   - name: "projects"
-    label: "Projects"
-    label_singular: "Project"
+    label: "Projekty"
+    label_singular: "Projekt"
+    description: "Karty projektów na stronie głównej. Kolejność wyświetlania zmienisz w zakładce Ustawienia."
     folder: "data/projects"
     create: true
     slug: "{{fields.id}}"
     extension: "json"
     format: "json"
     identifier_field: "title_pl"
-    summary: "{{category_pl}} — {{title_pl}}"
+    summary: "{{title_pl}} — {{category_pl}}"
+    sortable_fields: ["title_pl", "category_pl"]
+    view_filters:
+      - label: "Wyróżnione"
+        field: featured
+        pattern: true
 
     fields:
 
-      # ── 1. MAIN IMAGE ────────────────────────────────────────
-      - label: "Main image (thumbnail)"
+      # ── 1. ZDJĘCIE GŁÓWNE ────────────────────────────────────
+      - label: "Zdjęcie główne"
         name: thumb
         widget: image
         required: false
-        hint: "This image appears on the project card on the homepage. Use a render or interior photo — not a plan or text board. Leave empty to show a neutral placeholder."
+        hint: "Pokazuje się na karcie projektu na stronie głównej. Najlepiej render lub zdjęcie wnętrza — nie rzut ani plansza z tekstem."
 
-      - label: "Mark as featured?"
+      - label: "Projekt wyróżniony?"
         name: featured
         widget: boolean
         default: false
-        hint: "Featured projects show a coloured ribbon badge on the card."
+        hint: "Wyróżnione projekty mają kolorową wstążkę na karcie (tekst wstążki ustawisz poniżej)."
 
-      - label: "Badge text (PL)"
+      - label: "Tekst wstążki (PL)"
         name: badge_pl
         widget: string
         required: false
-        hint: "Shown only when 'Mark as featured' is on AND this text is filled in. e.g. Wyróżniony projekt"
+        hint: "Widoczny tylko, gdy projekt jest wyróżniony. Np. „Wyróżniony projekt” albo „Praca magisterska”."
 
-      - label: "Badge text (EN)"
+      - label: "Tekst wstążki (EN)"
         name: badge_en
         widget: string
         required: false
 
-      # ── 2. TITLES ────────────────────────────────────────────
-      - label: "Title (PL)"
+      # ── 2. NAZWA I KATEGORIA ─────────────────────────────────
+      - label: "Tytuł (PL)"
         name: title_pl
         widget: string
-        hint: "Main project name shown on the card and in the detail view."
+        hint: "Główna nazwa projektu — na karcie i w widoku szczegółowym."
 
-      - label: "Title (EN)"
+      - label: "Tytuł (EN)"
         name: title_en
         widget: string
 
-      - label: "Category (PL)"
+      - label: "Kategoria (PL)"
         name: category_pl
         widget: string
-        hint: "e.g. Projektowanie wnętrz / Architektura mieszkaniowa"
+        hint: "Np. Projektowanie wnętrz / Architektura mieszkaniowa."
 
-      - label: "Category (EN)"
+      - label: "Kategoria (EN)"
         name: category_en
         widget: string
-        hint: "e.g. Interior Design / Residential Architecture"
+        hint: "Np. Interior Design / Residential Architecture."
 
-      - label: "Subtitle / location (PL)"
+      - label: "Podtytuł / lokalizacja (PL)"
         name: subtitle_pl
         widget: string
-        hint: "Shown in smaller text under the title. e.g. Kraków — Projekt wnętrz, 2024"
+        hint: "Mniejszy tekst pod tytułem. Np. „Kraków — Projekt wnętrz, 2024”."
 
-      - label: "Subtitle / location (EN)"
+      - label: "Podtytuł / lokalizacja (EN)"
         name: subtitle_en
         widget: string
 
-      # ── 3. CARD DESCRIPTION & TAGS ───────────────────────────
-      - label: "Short description (PL)"
+      # ── 3. OPIS NA KARCIE I TAGI ─────────────────────────────
+      - label: "Krótki opis (PL)"
         name: card_desc_pl
         widget: text
-        hint: "1–2 sentences shown on the homepage card. Keep it punchy."
+        hint: "1–2 zdania widoczne na karcie na stronie głównej."
 
-      - label: "Short description (EN)"
+      - label: "Krótki opis (EN)"
         name: card_desc_en
         widget: text
 
-      - label: "Tags"
+      - label: "Tagi"
         name: tags
         widget: string
-        hint: "Comma-separated labels shown on the card — e.g. Kraków, Residential, 2024, SPA. 4–6 tags is ideal."
+        hint: "Etykiety na karcie, oddzielone przecinkami — np. Kraków, Residential, 2024, SPA. Najlepiej 4–6 tagów."
 
-      # ── 4. PROJECT STORY ─────────────────────────────────────
-      - label: "Project story"
+      # ── 4. TREŚĆ PROJEKTU ────────────────────────────────────
+      - label: "Treść projektu"
         name: story
         widget: list
+        label_singular: "sekcję"
+        collapsed: true
+        minimize_collapsed: true
+        summary: "{{fields.pl}}"
         hint: >
-          Each block is one section of the project detail view.
-          A typical project has 3 text+image blocks followed by one gallery block at the end.
-          • Text block: fill in PL text, EN text, and one image alongside the text.
-          • Gallery block: leave text empty, add multiple images to 'Gallery images' — these appear as a photo grid in the project view.
+          Każda sekcja to jeden fragment widoku projektu.
+          Typowy projekt: 3 sekcje tekst+zdjęcie, a na końcu jedna sekcja-galeria.
+          • Sekcja z tekstem: wpisz tekst PL i EN oraz dodaj jedno zdjęcie obok tekstu.
+          • Sekcja-galeria: zostaw teksty puste i dodaj kilka zdjęć w polu „Galeria zdjęć” —
+          pokażą się jako siatka zdjęć.
         fields:
-          - label: "Text (PL)"
+          - label: "Tekst (PL)"
             name: pl
             widget: text
             required: false
-            hint: "Leave empty for a gallery-only block."
+            hint: "Zostaw puste, jeśli to sekcja-galeria."
 
-          - label: "Text (EN)"
+          - label: "Tekst (EN)"
             name: en
             widget: text
             required: false
 
-          - label: "Image alongside text"
+          - label: "Zdjęcie obok tekstu"
             name: img
             widget: image
             required: false
-            hint: "One image displayed next to the paragraph. Leave empty for a gallery-only block."
+            hint: "Jedno zdjęcie wyświetlane obok akapitu. Zostaw puste w sekcji-galerii."
 
-          - label: "Gallery images"
+          - label: "Galeria zdjęć"
             name: imgs
             widget: list
             required: false
-            hint: "Multiple images for the scrollable strip. Use for the final 'gallery block' — leave empty in text blocks."
+            hint: "Kilka zdjęć pokazywanych jako siatka. Używaj w sekcji-galerii, w sekcjach z tekstem zostaw puste."
             field:
-              label: Image
+              label: "Zdjęcie"
               name: image
               widget: image
 
-      # ── 5. VIDEO (OPTIONAL) ──────────────────────────────────
-      - label: "Walkthrough video (optional)"
+      # ── 5. WIDEO (OPCJONALNE) ────────────────────────────────
+      - label: "Wideo — spacer po projekcie (opcjonalne)"
         name: video
         widget: file
         required: false
-        hint: "Upload an .mp4 video — shown at the bottom of the project detail view."
+        hint: "Plik .mp4 — pokaże się na końcu widoku projektu."
 
-      # ── 6. ADVANCED (don't touch unless you know what you're doing) ──
-      - label: "Project ID"
+      # ── 6. ZAAWANSOWANE ──────────────────────────────────────
+      - label: "ID projektu (nie zmieniaj!)"
         name: id
         widget: string
-        hint: "⚠️ Set this once when creating a project and never change it afterwards — it is used as the filename and changing it will break existing links. Use lowercase letters, numbers and hyphens only. e.g. apartment-krakow-2024"
+        hint: "⚠️ Ustaw raz przy tworzeniu projektu i nigdy nie zmieniaj — to nazwa pliku. Tylko małe litery, cyfry i myślniki, np. dom-krakow-2024. Po zmianie projekt zniknie ze strony!"
 
-  # ── PROJECT ORDER ─────────────────────────────────────────────
+  # ── KOLEJNOŚĆ PROJEKTÓW ───────────────────────────────────────
   - name: "settings"
-    label: "Settings"
+    label: "Ustawienia"
     files:
-      - label: "Project display order"
+      - label: "Kolejność projektów na stronie"
         name: "order"
         file: "data/order.json"
         fields:
-          - label: "Project order"
+          - label: "Kolejność"
             name: order
             widget: list
-            hint: "Drag to reorder. Each value must exactly match a project's ID. Projects are displayed on the homepage in this order."
+            hint: "Przeciągnij, aby zmienić kolejność. Każda pozycja musi dokładnie odpowiadać ID projektu. Projekty pokazują się na stronie w tej kolejności."
             field:
-              label: Project ID
+              label: "ID projektu"
               name: id
               widget: string
