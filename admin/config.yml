@@ -13,7 +13,7 @@ collections:
     label_singular: "Project"
     folder: "data/projects"
     create: true
-    slug: "{{id}}"
+    slug: "{{fields.id}}"
     extension: "json"
     format: "json"
     identifier_field: "title_pl"
@@ -25,7 +25,8 @@ collections:
       - label: "Main image (thumbnail)"
         name: thumb
         widget: image
-        hint: "This image appears on the project card on the homepage. Use a render or interior photo — not a plan or text board."
+        required: false
+        hint: "This image appears on the project card on the homepage. Use a render or interior photo — not a plan or text board. Leave empty to show a neutral placeholder."
 
       - label: "Mark as featured?"
         name: featured
@@ -37,7 +38,7 @@ collections:
         name: badge_pl
         widget: string
         required: false
-        hint: "Only shown if 'Mark as featured' is on. e.g. Wyróżniony projekt"
+        hint: "Shown only when 'Mark as featured' is on AND this text is filled in. e.g. Wyróżniony projekt"
 
       - label: "Badge text (EN)"
         name: badge_en
