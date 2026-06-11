@@ -2,6 +2,10 @@ backend:
   name: git-gateway
   branch: master
 
+# Only used when the site is opened on localhost with `npx decap-server` running;
+# ignored in production.
+local_backend: true
+
 media_folder: "uploads"
 public_folder: "/uploads"
 
