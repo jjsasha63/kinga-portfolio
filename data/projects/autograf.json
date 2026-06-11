@@ -12,13 +12,42 @@
   "card_desc_pl": "Wizualizacje architektoniczne wykonane we współpracy z biurem Autograf Studio oraz ich publikacje.",
   "card_desc_en": "Architectural visualisations created in collaboration with Autograf Studio, including their publications.",
   "tags": "Wizualizacje, Autograf Studio, Publikacje",
-  "thumb": "",
+  "thumb": "./autograf/render_13.jpg",
   "story": [
     {
-      "pl": "Wizualizacje we współpracy z biurem Autograf Studio oraz ich publikacje.",
-      "en": "Visualisations in collaboration with Autograf Studio and their publications.",
-      "img": "",
-      "imgs": []
+      "pl": "Wizualizacje budynków zaprojektowanych przez biuro Autograf Studio, wykonane podczas mojej pracy w pracowni (2022–2023) — od rezydencji i domów jednorodzinnych po obiekty publiczne i założenia krajobrazowe.",
+      "en": "Visualisations of buildings designed by Autograf Studio, created during my time at the practice (2022–2023) — from residences and single-family houses to public buildings and landscape schemes.",
+      "img": "./autograf/render_03.jpg"
+    },
+    {
+      "pl": "Wybrane wizualizacje ukazały się w publikacjach branżowych i mediach — m.in. Archinea, Onet i Architektura-murator — przy projektach biura Autograf Studio.",
+      "en": "Selected visualisations were featured in industry publications and media — including Archinea, Onet and Architektura-murator — accompanying Autograf Studio projects.",
+      "imgs": [
+        "./autograf/publikacje_1.jpg",
+        "./autograf/publikacje_2.jpg"
+      ]
+    },
+    {
+      "imgs": [
+        "./autograf/render_01.jpg",
+        "./autograf/render_02.jpg",
+        "./autograf/render_04.jpg",
+        "./autograf/render_05.jpg",
+        "./autograf/render_06.jpg",
+        "./autograf/render_07.jpg",
+        "./autograf/render_08.jpg",
+        "./autograf/render_09.jpg",
+        "./autograf/render_10.jpg",
+        "./autograf/render_11.jpg",
+        "./autograf/render_12.jpg",
+        "./autograf/render_14.jpg",
+        "./autograf/render_15.jpg",
+        "./autograf/render_16.jpg",
+        "./autograf/render_17.jpg",
+        "./autograf/render_18.jpg",
+        "./autograf/render_19.jpg",
+        "./autograf/render_20.jpg"
+      ]
     }
   ]
 }

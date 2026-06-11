@@ -15,7 +15,7 @@
     {
       "pl": "Motel w Nowym Targu — projekt akademicki, Politechnika Krakowska, Rok III, Zespół Architektury Współczesnego Regionalizmu. Obiekt osadzony w podhalańskim krajobrazie: niskie poziome bryły wtopione w rozległą zieleń, zielone dachy integrujące budynek z terenem. Elewacje łączą cegłę, tynk i czarną stal — materiały nawiązujące do regionalnej tradycji budowlanej.",
       "en": "Motel in Nowy Targ — academic project, Cracow University of Technology, Year III, Contemporary Regionalism studio. The building is embedded in the Podhale landscape: low horizontal volumes nestled in open greenery, green roofs integrating the building with the terrain. Façades combine brick, render and black steel — materials referencing regional building tradition.",
-      "img": "./motel/_img2/views_4.jpg"
+      "img": "./motel/_img2/views_1.jpg"
     },
     {
       "pl": "Strefa SPA z krytym basenem stanowi serce obiektu — basen otoczony panoramicznym przeszkleniem, zielona ściana, terrazzo, subtelne neonowe akcenty. Ponadto: recepcja, restauracja i pokoje gościnne ze spokojnym, eleganckimi wykończeniem.",
@@ -29,7 +29,6 @@
     },
     {
       "imgs": [
-        "./motel/_img2/views_1.jpg",
         "./motel/_img2/views_2.jpg",
         "./motel/_img2/views_3.jpg",
         "./motel/_img2/details_2.jpg",
@@ -44,8 +43,6 @@
         "./motel/_img2/sections_3.jpg",
         "./motel/_img2/sections_4.jpg",
         "./motel/_img2/sections_5.jpg",
-        "./motel/_img2/context_1.jpg",
-        "./motel/_img2/context_2.jpg",
         "./motel/_img2/context_3.jpg",
         "./motel/_img2/cover_2.jpg",
         "./motel/_img2/cover_3.jpg",

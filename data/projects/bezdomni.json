@@ -17,7 +17,7 @@
     {
       "pl": "Praca dyplomowa magisterska obroniona w 2024 roku na Politechnice Krakowskiej. Działka przy ul. Grzegórzeckiej 32 — w pobliżu Ronda Grzegórzeckiego, na terenie przez lata zdegradowanym, pozbawionym wartościowej zabudowy. Projekt odpowiada na realną potrzebę społeczną: schronisko dla bezdomnych mężczyzn oferujące godne warunki pobytu i program terapeutyczny.",
       "en": "Master's thesis defended in 2024 at Cracow University of Technology. The site at ul. Grzegórzecka 32 — near Grzegórzecki Roundabout, on land long degraded and lacking quality buildings. The project addresses a real social need: a shelter for homeless men offering dignified living conditions and a therapeutic programme.",
-      "img": "./praca magisterska/_img2/embedded_1.jpg"
+      "img": "./praca magisterska/_img/p01_cropped.jpg"
     },
     {
       "pl": "Budynek dwukondygnacyjny o pow. użytkowej 2531 m² zorganizowany wokół wewnętrznego dziedzińca — serca całego założenia, pełniącego funkcję przestrzeni wspólnej, terapeutycznej i integracyjnej. Parter: recepcja, gabinety medyczne, kuchnia społeczna, kaplica, pracownie warsztatowe, sale terapii, biblioteka. Piętro: pokoje mieszkalne (1-, 4- i 6-osobowe) i dodatkowe pracownie.",
@@ -30,10 +30,7 @@
     },
     {
       "imgs": [
-        "./praca magisterska/_img/p01_cropped.jpg",
-        "./praca magisterska/_img2/embedded_1.jpg",
-        "./praca magisterska/_img2/board_top.jpg",
-        "./praca magisterska/_img2/board_bot.jpg"
+        "./praca magisterska/_img2/board_top.jpg"
       ]
     }
   ]
