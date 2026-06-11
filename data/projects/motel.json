@@ -29,7 +29,6 @@
     },
     {
       "imgs": [
-        "./motel/_img2/views_2.jpg",
         "./motel/_img2/views_3.jpg",
         "./motel/_img2/details_2.jpg",
         "./motel/_img2/details_3.jpg",
@@ -38,15 +37,12 @@
         "./motel/_img2/details_6.jpg",
         "./motel/_img2/elevations_2.jpg",
         "./motel/_img2/elevations_3.jpg",
-        "./motel/_img2/sections_1.jpg",
-        "./motel/_img2/sections_2.jpg",
         "./motel/_img2/sections_3.jpg",
-        "./motel/_img2/sections_4.jpg",
-        "./motel/_img2/sections_5.jpg",
-        "./motel/_img2/context_3.jpg",
         "./motel/_img2/cover_2.jpg",
-        "./motel/_img2/cover_3.jpg",
-        "./motel/_img2/cover_4.jpg"
+        "./motel/_img2/elev_north.jpg",
+        "./motel/_img2/elev_south.jpg",
+        "./motel/_img2/elev_east.jpg",
+        "./motel/_img2/elev_west.jpg"
       ]
     }
   ]
