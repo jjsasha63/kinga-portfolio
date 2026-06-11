@@ -3,7 +3,11 @@ backend:
   branch: master
 
 media_folder: "uploads"
-public_folder: "uploads"
+public_folder: "/uploads"
+
+site_url: "https://kinga-trojan.netlify.app"
+display_url: "https://kinga-trojan.netlify.app"
+logo_url: "https://kinga-trojan.netlify.app/apple-touch-icon.png"
 
 collections:
 
@@ -97,7 +101,7 @@ collections:
           Each block is one section of the project detail view.
           A typical project has 3 text+image blocks followed by one gallery block at the end.
           • Text block: fill in PL text, EN text, and one image alongside the text.
-          • Gallery block: leave text empty, add multiple images to 'Gallery images' — these appear as the scrollable strip.
+          • Gallery block: leave text empty, add multiple images to 'Gallery images' — these appear as a photo grid in the project view.
         fields:
           - label: "Text (PL)"
             name: pl
