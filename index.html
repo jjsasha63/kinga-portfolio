@@ -350,15 +350,18 @@
     #portfolio { background: var(--bg); }
     .portfolio-list {
       margin-top: 2.5rem;
-      border-top: 1px solid var(--border);
     }
     .list-item {
       display: grid;
       grid-template-columns: 62% 38%;
-      border-bottom: 1px solid var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
       cursor: pointer;
       transition: background var(--trans);
     }
+    .list-item:last-child { margin-bottom: 0; }
     .list-item:hover { background: var(--bg2); }
     .list-img-wrap {
       position: relative;
@@ -1050,8 +1053,8 @@
 <!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
 <footer>
   <div class="footer-logo"><span class="logo-mark">KT</span>Kinga Trojan</div>
-  <div class="footer-copy" data-pl>&copy; <span class="js-year">2026</span> Kinga Trojan — Projektantka Wnętrz</div>
-  <div class="footer-copy" data-en>&copy; <span class="js-year">2026</span> Kinga Trojan — Interior Designer</div>
+  <div class="footer-copy" data-pl>&copy; <span class="js-year">2026</span> Kinga Trojan — Architekt</div>
+  <div class="footer-copy" data-en>&copy; <span class="js-year">2026</span> Kinga Trojan — Architect</div>
 </footer>
 
 <!-- ═══ MODAL ══════════════════════════════════════════════════════ -->
@@ -1109,13 +1112,17 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g,
 // Normalise a project loaded from JSON (handles both old & CMS format)
 function normaliseProject(p) {
   // tags: CMS stores a comma-separated string; legacy formats: [{tag:"..."}] or ["..."]
-  if (typeof p.tags === 'string') {
-    p.tags = p.tags.split(',').map(t => t.trim()).filter(Boolean);
-  } else if (Array.isArray(p.tags) && p.tags.length && typeof p.tags[0] === 'object') {
-    p.tags = p.tags.map(t => t.tag || t);
-  } else if (!Array.isArray(p.tags)) {
-    p.tags = [];
-  }
+  const parseTags = v => {
+    if (typeof v === 'string') return v.split(',').map(t => t.trim()).filter(Boolean);
+    if (Array.isArray(v)) return v.map(t => (t && typeof t === 'object') ? (t.tag || '') : t).filter(Boolean);
+    return [];
+  };
+  const legacy = parseTags(p.tags);
+  p.tags_pl = parseTags(p.tags_pl);
+  p.tags_en = parseTags(p.tags_en);
+  if (!p.tags_pl.length) p.tags_pl = legacy;
+  if (!p.tags_en.length) p.tags_en = p.tags_pl;
+  p.tags = legacy;
   // story imgs: CMS stores as [{image:"..."}] or ["..."]
   if (Array.isArray(p.story)) {
     p.story = p.story.map(block => {
@@ -1174,7 +1181,7 @@ function renderList() {
         <h3 class="list-title"><span data-pl>${esc(p.title_pl)}</span><span data-en>${esc(p.title_en)}</span></h3>
         <div class="list-sub"><span data-pl>${esc(p.subtitle_pl)}</span><span data-en>${esc(p.subtitle_en)}</span></div>
         <p class="list-desc"><span data-pl>${esc(p.card_desc_pl)}</span><span data-en>${esc(p.card_desc_en)}</span></p>
-        <div class="list-tags">${p.tags.map(t => `<span class="list-tag">${esc(t)}</span>`).join('')}</div>
+        <div class="list-tags">${(isEN ? p.tags_en : p.tags_pl).map(t => `<span class="list-tag">${esc(t)}</span>`).join('')}</div>
         <div class="list-cta"><span data-pl>Otwórz projekt →</span><span data-en>Open project →</span></div>
       </div>
       ${previewRow}`;
@@ -1234,7 +1241,7 @@ function openModal(idx) {
 
   // Tags
   document.getElementById('modal-meta').innerHTML =
-    p.tags.map(t => `<span class="modal-tag">${esc(t)}</span>`).join('');
+    (en ? p.tags_en : p.tags_pl).map(t => `<span class="modal-tag">${esc(t)}</span>`).join('');
 
   // Story — a block may combine text, a single side image, and a gallery
   const storyEl = document.getElementById('modal-story');

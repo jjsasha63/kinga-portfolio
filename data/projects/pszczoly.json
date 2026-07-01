@@ -9,29 +9,56 @@
   "subtitle_en": "Piekary, Liszki commune, Małopolska — Architecture of Rural Areas, CUT 2022/23",
   "card_desc_pl": "Kompleks pasieczny dla trzech pokoleń — mieszkanie, pracownia miodarska i pasieka dla 54 uli.",
   "card_desc_en": "A three-generation beekeeping complex — residence, honey studio and apiary for 54 hives.",
-  "tags": "Rural, Multi-gen, 320 m² + 286 m², Timber, Małopolska, Wnętrza",
+  "tags_pl": "Architektura wsi, Piekary, Dom wielopokoleniowy, Pracownia pasieczna, Pasieka 54 uli, Drewno i kamień",
+  "tags_en": "Rural architecture, Piekary, Multi-generational house, Apiary workshop, 54-hive apiary, Timber & stone",
   "thumb": "/wies pszczoły/PHOTO-2026-05-20-11-23-53.jpg",
   "story": [
     {
-      "pl": "Projekt planowania przestrzennego wsi Piekary w gminie Liszki (Małopolska) zrealizowany w ramach przedmiotu Architektura Wsi i Planowanie Przestrzenne na PK (2022/23). Projekt obejmuje program kilku obiektów dla całej wsi — od zabudowy mieszkaniowej po budynki publiczne i gospodarcze — oraz kompleksową dokumentację architektoniczną.",
-      "en": "A spatial planning project for the village of Piekary, Liszki commune (Małopolska), developed for the Architecture of Rural Areas and Spatial Planning course at CUT (2022/23). The project covers a programme of several buildings for the whole village — from residential to public and farm buildings — with complete architectural documentation.",
-      "img": "/wies pszczoły/PHOTO-2026-05-20-11-23-52.jpg"
+      "pl": "Projekt obejmuje zespół zabudowy pasiecznej składający się z domu wielopokoleniowego, budynku pracowni pasiecznej ze sklepem pszczelarskim oraz pasieki liczącej 54 ule.",
+      "en": "The project comprises an apiary complex consisting of a multi-generational house, an apiary workshop building with a beekeeping shop, and an apiary of 54 hives.",
+      "img": "/wies pszczoły/_plansze/plansza_04.jpg",
+      "imgs": []
     },
     {
-      "pl": "Gospodarstwo pasieczne składa się z domu mieszkalnego dla trzech pokoleń (320 m²), budynku pracowni pszczelarskiej ze sklepem miodarskim i dwiema salami szkoleniowymi (286 m²) oraz pasieki na 54 ule. Materiały nawiązują do lokalnej tradycji: okładzina świerkowa, dach z blachy antracytowej, kamień dekoracyjny.",
-      "en": "The beekeeping farm comprises a three-generation house (320 m²), a honey studio with shop and two training rooms (286 m²), and an apiary for 54 hives. Materials echo local tradition: spruce cladding, anthracite metal roof, decorative stone.",
-      "img": "/wies pszczoły/lumion_farmhouse.jpg"
+      "pl": "Budynek pracowni pasiecznej został zaprojektowany jako obiekt produkcyjno-usługowy związany z działalnością pszczelarską. Na parterze znajdują się sklep pszczelarski, pracownia, magazyny, pomieszczenia do przechowywania, zaplecze socjalne oraz inne niezbędne pomieszczenia zapewniające prawidłowe funkcjonowanie obiektu. Na piętrze zlokalizowano dwie sale warsztatowe, pomieszczenia administracyjne oraz dodatkowe przestrzenie wspomagające działalność edukacyjną i organizacyjną.",
+      "en": "The apiary workshop building was designed as a production-and-service facility for beekeeping. The ground floor houses a beekeeping shop, a workshop, storage and utility rooms, staff facilities and other spaces necessary for the proper functioning of the building. On the first floor there are two workshop rooms, administrative spaces and additional areas supporting educational and organisational activities.",
+      "img": "/wies pszczoły/_plansze/plansza_05.jpg",
+      "imgs": []
     },
     {
-      "pl": "Program wsi obejmuje również obiekt kulturalno-usługowy z żywą ścianą i zielonym dachem — centrum życia społecznego wsi, korespondujące materiałowo z ceglastą zabudową historyczną Małopolski.",
-      "en": "The village programme also includes a cultural and service building with a living wall and green roof — the social heart of the village, responding materially to the brick vernacular of historic Małopolska.",
-      "img": "/wies pszczoły/PHOTO-2026-05-20-11-23-36.jpg"
+      "pl": "Dom wielopokoleniowy przeznaczony jest dla kilku pokoleń jednej rodziny. Na parterze znajdują się przestronny salon z kuchnią i jadalnią, garaż dwustanowiskowy, niezależne mieszkanie dla dziadków, kuchnia gospodarcza, śluza brudu, toaleta oraz inne pomieszczenia pomocnicze. Na piętrze zaprojektowano cztery sypialnie, dwie łazienki, garderobę, czytelnię oraz dodatkowe pomieszczenia zapewniające komfortowe użytkowanie budynku.",
+      "en": "The multi-generational house is intended for several generations of one family. The ground floor contains a spacious living room with kitchen and dining area, a double garage, an independent apartment for the grandparents, a utility kitchen, a mud room, a toilet and other auxiliary rooms. The first floor holds four bedrooms, two bathrooms, a wardrobe, a reading room and further spaces ensuring comfortable use of the house.",
+      "img": "/wies pszczoły/_plansze/plansza_06.jpg",
+      "imgs": []
     },
     {
+      "pl": "Z salonu głównego oraz z mieszkania przeznaczonego dla dziadków zapewniono bezpośrednie wyjścia na zewnętrzne tarasy, które stanowią przedłużenie przestrzeni mieszkalnej i umożliwiają komfortowy kontakt z otaczającą zielenią.",
+      "en": "The main living room and the grandparents' apartment both open directly onto outdoor terraces, which extend the living space and provide comfortable contact with the surrounding greenery.",
+      "img": "/wies pszczoły/PHOTO-2026-05-20-11-23-52.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "Na terenie gospodarstwa znajdują się pasieka z 54 ulami, tarasy rekreacyjne, miejsca parkingowe dla klientów oraz liczne nasadzenia zieleni niskiej i wysokiej. Całość założenia jest ogrodzona i tworzy spójną przestrzeń łączącą funkcje mieszkalne, produkcyjne, edukacyjne i rekreacyjne.",
+      "en": "The homestead grounds include an apiary of 54 hives, recreational terraces, customer parking and extensive low and high greenery. The whole plot is fenced and forms a coherent space combining residential, production, educational and recreational functions.",
+      "img": "/wies pszczoły/_plansze/plansza_04_crop.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "Architektura obiektów nawiązuje do lokalnej tradycji budowlanej poprzez zastosowanie naturalnych materiałów. Elewacje wykończono okładziną z drewnianych desek oraz elementami kamienia naturalnego, co podkreśla regionalny charakter zabudowy i harmonijnie wpisuje ją w krajobraz wiejski.",
+      "en": "The architecture references the local building tradition through the use of natural materials. The façades are finished with timber board cladding and natural stone elements, underlining the regional character of the buildings and blending them harmoniously into the rural landscape.",
+      "img": "/wies pszczoły/_plansze/plansza_07.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "",
+      "en": "",
+      "img": "",
       "imgs": [
-        "/wies pszczoły/PHOTO-2026-05-20-11-23-49.jpg",
-        "/wies pszczoły/PHOTO-2026-05-20-11-23-50.jpg",
-        "/wies pszczoły/PHOTO-2026-05-20-11-23-51.jpg"
+        "/wies pszczoły/_plansze/plansza_01.jpg",
+        "/wies pszczoły/_plansze/plansza_02.jpg",
+        "/wies pszczoły/_plansze/plansza_03.jpg",
+        "/wies pszczoły/PHOTO-2026-05-20-11-23-36.jpg",
+        "/wies pszczoły/PHOTO-2026-05-20-11-23-50.jpg"
       ]
     }
   ]

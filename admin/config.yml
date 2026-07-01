@@ -100,10 +100,16 @@ collections:
         name: card_desc_en
         widget: text
 
-      - label: "Tagi"
-        name: tags
+      - label: "Tagi (PL)"
+        name: tags_pl
         widget: string
-        hint: "Etykiety na karcie, oddzielone przecinkami — np. Kraków, Residential, 2024, SPA. Najlepiej 4–6 tagów."
+        hint: "Etykiety po polsku, oddzielone przecinkami — hasła o projekcie (nie o programach!), np. Kraków, Dom jednorodzinny, Wnętrza. Najlepiej 4–6 tagów."
+
+      - label: "Tagi (EN)"
+        name: tags_en
+        widget: string
+        required: false
+        hint: "Te same etykiety po angielsku, oddzielone przecinkami — np. Kraków, Single-family house, Interiors."
 
       # ── 4. TREŚĆ PROJEKTU ────────────────────────────────────
       - label: "Treść projektu"

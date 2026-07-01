@@ -63,7 +63,7 @@
       var featured = e.getIn(['data','featured']);
       var badge    = e.getIn(['data','badge_pl']);
       var thumbSrc = resolve(e.getIn(['data','thumb']));
-      var tagsRaw  = e.getIn(['data','tags']);
+      var tagsRaw  = e.getIn(['data','tags_pl']) || e.getIn(['data','tags']);
       var story    = e.getIn(['data','story']);
       var video    = e.getIn(['data','video']);
 

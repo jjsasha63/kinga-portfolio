@@ -1,8 +1,8 @@
 {
   "id": "kamienica",
   "featured": true,
-  "badge_pl": "Wyróżniony projekt",
-  "badge_en": "Featured project",
+  "badge_pl": "Praca inżynierska",
+  "badge_en": "Engineering thesis",
   "category_pl": "Architektura",
   "category_en": "Architecture",
   "title_pl": "Kamienica Grzegórzecka",
@@ -11,7 +11,8 @@
   "subtitle_en": "ul. Grzegórzecka 37, Kraków — Engineering Diploma Thesis, 2023",
   "card_desc_pl": "Współczesna kamienica wpisana w historyczną zabudowę krakowskiej dzielnicy Grzegórzki.",
   "card_desc_en": "A contemporary tenement integrated into the historic streetscape of Kraków's Grzegórzki district.",
-  "tags": "Praca inżynierska, Kraków, Residential, Mixed-use, Brick + Lamele",
+  "tags_pl": "Praca inżynierska, Kraków, Kamienica plombowa, Zabudowa mieszkaniowo-usługowa, Cegła, Lamele drewniane",
+  "tags_en": "Engineering thesis, Kraków, Infill tenement, Mixed-use housing, Brick, Timber lamellas",
   "thumb": "/kamienica/_img/p01_cropped.jpg",
   "story": [
     {

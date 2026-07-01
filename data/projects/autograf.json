@@ -5,26 +5,26 @@
   "badge_en": "",
   "category_pl": "Wizualizacje",
   "category_en": "Visualisations",
-  "title_pl": "Wizualizacje — Autograf Studio",
-  "title_en": "Visualisations — Autograf Studio",
-  "subtitle_pl": "Współpraca z biurem Autograf Studio",
-  "subtitle_en": "Collaboration with Autograf Studio",
-  "card_desc_pl": "Wizualizacje architektoniczne wykonane we współpracy z biurem Autograf Studio oraz ich publikacje.",
-  "card_desc_en": "Architectural visualisations created in collaboration with Autograf Studio, including their publications.",
-  "tags": "Wizualizacje, Autograf Studio, Publikacje",
+  "title_pl": "Wizualizacje we współpracy z biurem Autograf Studio",
+  "title_en": "Visualisations in collaboration with Autograf Studio",
+  "subtitle_pl": "",
+  "subtitle_en": "",
+  "card_desc_pl": "Wizualizacje we współpracy z biurem Autograf Studio oraz ich publikacje.",
+  "card_desc_en": "Visualisations in collaboration with Autograf Studio and their publications.",
+  "tags_pl": "Wizualizacje, Autograf Studio, Publikacje",
+  "tags_en": "Visualisations, Autograf Studio, Publications",
   "thumb": "/autograf/render_13.jpg",
   "story": [
     {
-      "pl": "Wizualizacje budynków zaprojektowanych przez biuro Autograf Studio, wykonane podczas mojej pracy w pracowni (2022–2023) — od rezydencji i domów jednorodzinnych po obiekty publiczne i założenia krajobrazowe.",
-      "en": "Visualisations of buildings designed by Autograf Studio, created during my time at the practice (2022–2023) — from residences and single-family houses to public buildings and landscape schemes.",
-      "img": "/autograf/render_03.jpg"
-    },
-    {
-      "pl": "Wybrane wizualizacje ukazały się w publikacjach branżowych i mediach — m.in. Archinea, Onet i Architektura-murator — przy projektach biura Autograf Studio.",
-      "en": "Selected visualisations were featured in industry publications and media — including Archinea, Onet and Architektura-murator — accompanying Autograf Studio projects.",
+      "pl": "Publikacje: Archinea, Onet, Architektura-murator.",
+      "en": "Publications: Archinea, Onet, Architektura-murator.",
+      "img": "/autograf/render_03.jpg",
       "imgs": []
     },
     {
+      "pl": "",
+      "en": "",
+      "img": "",
       "imgs": [
         "/autograf/render_01.jpg",
         "/autograf/render_02.jpg",

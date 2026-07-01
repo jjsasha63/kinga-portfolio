@@ -1,0 +1,48 @@
+{
+  "id": "domkultury",
+  "featured": false,
+  "badge_pl": "",
+  "badge_en": "",
+  "category_pl": "Architektura użyteczności publicznej",
+  "category_en": "Public Architecture",
+  "title_pl": "Centrum Dzieci i Młodzieży w Limanowej",
+  "title_en": "Children and Youth Centre in Limanowa",
+  "subtitle_pl": "ul. Bronisława Czecha, Limanowa — Projekt akademicki, PK",
+  "subtitle_en": "Bronisława Czecha St., Limanowa — Academic project, CUT",
+  "card_desc_pl": "Dom kultury dla dzieci i młodzieży — bryła wpisana w skarpę, zielony dach, amfiteatr i tarasy widokowe.",
+  "card_desc_en": "A culture house for children and youth — set into the hillside, with a green roof, amphitheatre and viewing terraces.",
+  "tags_pl": "Projekt akademicki, Limanowa, Dom kultury, Zielony dach, Amfiteatr",
+  "tags_en": "Academic project, Limanowa, Community culture centre, Green roof, Amphitheatre",
+  "thumb": "/dom kultury/render_front_2.jpg",
+  "video": "",
+  "story": [
+    {
+      "pl": "Głównym założeniem projektu było stworzenie domu kultury, który swoją formą i zagospodarowaniem miał stać się miejscem, w którym dzieci i młodzież będą mogli rozwijać swoje zainteresowania, spędzać czas z rówieśnikami, a także idealnym miejscem do nauki i zabawy. Obiekt daje mieszkańcom nowe przestrzenie wspólne: amfiteatr, salę prelekcyjną, salę wystawową, plac zabaw, park oraz tarasy widokowe.",
+      "en": "The core idea of the project was to create a culture house whose form and site layout make it a place where children and young people can develop their interests, spend time with peers, and find an ideal spot for both learning and play. The building offers residents new shared spaces: an amphitheatre, a lecture room, an exhibition hall, a playground, a park and viewing terraces.",
+      "img": "/dom kultury/render_front_1.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "Budynek zlokalizowano na działce przy ul. Bronisława Czecha w Limanowej, na skarpie nad potokiem Starowiejskim. Bryła wykorzystuje naturalny spadek terenu — od strony ulicy ma jedną kondygnację nadziemną, a zielony stropodach ze świetlikami staje się przedłużeniem otaczającego parku.",
+      "en": "The building sits on a plot on Bronisława Czecha Street in Limanowa, on a slope above the Starowiejski stream. The massing exploits the natural fall of the terrain — one storey rises above street level, while the green roof with skylights becomes an extension of the surrounding park.",
+      "img": "/dom kultury/plansza_1.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "Na parterze znalazły się hol wejściowy z recepcją i szatnią, sala wystawowa oraz czytelnia czasopism z bufetem, uzupełnione zapleczem technicznym i magazynowym. Przed budynkiem zaprojektowano amfiteatr wpisany w skarpę, miejsca parkingowe, stojaki rowerowe i kładkę dla pieszych nad potokiem.",
+      "en": "The ground floor holds an entrance hall with reception and cloakroom, an exhibition hall and a periodicals reading room with a buffet, complemented by technical and storage facilities. In front of the building, an amphitheatre is carved into the slope, alongside parking, bicycle racks and a pedestrian footbridge over the stream.",
+      "img": "/dom kultury/plansza_2.jpg",
+      "imgs": []
+    },
+    {
+      "pl": "",
+      "en": "",
+      "img": "",
+      "imgs": [
+        "/dom kultury/render_front_2.jpg",
+        "/dom kultury/render_wschod.jpg",
+        "/dom kultury/render_bufet.jpg"
+      ]
+    }
+  ]
+}
