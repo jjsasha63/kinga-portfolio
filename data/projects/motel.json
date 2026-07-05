@@ -5,37 +5,44 @@
   "category_en": "Commercial Architecture",
   "title_pl": "Projekt Motelu",
   "title_en": "Motel Project",
-  "subtitle_pl": "Nowy Targ — Architektura Współczesnego Regionalizmu, PK Rok III",
-  "subtitle_en": "Nowy Targ — Contemporary Regionalism, CUT Year III",
-  "card_desc_pl": "Motel w krajobrazie Podhala — regionalizm, zielone dachy i spa z krytym basenem.",
-  "card_desc_en": "A motel in the Podhale landscape — regionalism, green roofs and a spa with indoor pool.",
-  "tags_pl": "Projekt akademicki, Nowy Targ, Regionalizm, Strefa SPA z basenem, Panorama Tatr",
-  "tags_en": "Academic project, Nowy Targ, Regionalism, SPA & pool, Tatra panorama",
-  "thumb": "/motel/_img2/views_4.jpg",
+  "subtitle_pl": "Nowy Targ — Politechnika Krakowska, studia inżynierskie, III rok — Zespół Architektury Współczesnego Regionalizmu",
+  "subtitle_en": "Nowy Targ — Cracow University of Technology, engineering studies, Year III — Contemporary Regionalism Studio",
+  "card_desc_pl": "Motel w krajobrazie Podhala — zielony dach, patynowana miedź i corten, strefa wellness z basenem i jacuzzi.",
+  "card_desc_en": "A motel in the Podhale landscape — green roof, patinated copper and corten steel, wellness zone with pool and jacuzzi.",
+  "tags_pl": "Projekt akademicki, Nowy Targ, Zielony dach, Corten i miedź, Strefa wellness z basenem",
+  "tags_en": "Academic project, Nowy Targ, Green roof, Corten & copper, Wellness & pool",
+  "thumb": "/motel/_img2/ext_1.jpg",
   "story": [
     {
-      "pl": "Motel w Nowym Targu — projekt akademicki, Politechnika Krakowska, Rok III, Zespół Architektury Współczesnego Regionalizmu. Obiekt osadzony w podhalańskim krajobrazie: niskie poziome bryły wtopione w rozległą zieleń, zielone dachy integrujące budynek z terenem. Elewacje łączą cegłę, tynk i czarną stal — materiały nawiązujące do regionalnej tradycji budowlanej.",
-      "en": "Motel in Nowy Targ — academic project, Cracow University of Technology, Year III, Contemporary Regionalism studio. The building is embedded in the Podhale landscape: low horizontal volumes nestled in open greenery, green roofs integrating the building with the terrain. Façades combine brick, render and black steel — materials referencing regional building tradition.",
-      "img": "/motel/_img2/views_1.jpg"
+      "pl": "Motel w Nowym Targu — Politechnika Krakowska, studia inżynierskie, III rok, Zespół Architektury Współczesnego Regionalizmu. Projekt motelu powstał jako praca semestralna, której celem było zaprojektowanie nowoczesnego obiektu harmonijnie wpisującego się w krajobraz Podhala. Zamiast bezpośrednich odniesień do architektury regionalnej zastosowano współczesne rozwiązania podkreślające relację budynku z otaczającą przyrodą.",
+      "en": "Motel in Nowy Targ — Cracow University of Technology, engineering studies, Year III, Contemporary Regionalism Studio. The motel was designed as a semester project whose aim was to create a modern building that blends harmoniously into the Podhale landscape. Instead of direct references to regional architecture, contemporary solutions were used to emphasise the building's relationship with the surrounding nature.",
+      "img": "/motel/_img2/ext_1.jpg"
     },
     {
-      "pl": "Strefa SPA z krytym basenem stanowi serce obiektu — basen otoczony panoramicznym przeszkleniem, zielona ściana, terrazzo, subtelne neonowe akcenty. Ponadto: recepcja, restauracja i pokoje gościnne ze spokojnym, eleganckimi wykończeniem.",
-      "en": "The indoor SPA with pool is the heart of the building — surrounded by panoramic glazing, a green feature wall, terrazzo floors and subtle neon accents. Also: reception, restaurant and guest rooms with calm, elegant finishes.",
+      "pl": "Budynek zaprojektowano jako horyzontalną bryłę wpisaną w naturalne ukształtowanie terenu. Zielony dach, elewacje porośnięte pnączami oraz wykończenie z patynowanej miedzi i stali cortenowskiej sprawiają, że architektura staje się integralną częścią krajobrazu. Wielkoformatowe przeszklenia otwierają wnętrza na widoki, a ruchome żaluzje poprawiają komfort użytkowania.",
+      "en": "The building is designed as a horizontal volume set into the natural shape of the terrain. A green roof, façades overgrown with climbing plants, and finishes of patinated copper and corten steel make the architecture an integral part of the landscape. Large-format glazing opens the interiors to the views, while movable louvres improve user comfort.",
+      "img": "/motel/_img2/ext_2.jpg"
+    },
+    {
+      "pl": "Na parterze zlokalizowano recepcję, restaurację oraz strefę wellness z basenem i jacuzzi. Dwie wyższe kondygnacje mieszczą pokoje hotelowe i przestrzenie wspólne, zaprojektowane z myślą o komforcie gości oraz maksymalnym wykorzystaniu walorów otoczenia.",
+      "en": "The ground floor houses the reception, a restaurant and a wellness zone with a pool and jacuzzi. The two upper storeys contain hotel rooms and shared spaces, designed for guest comfort and to make the most of the qualities of the surroundings.",
       "img": "/motel/_img2/details_1.jpg"
     },
     {
-      "pl": "Bryła rozkłada się poziomo wzdłuż działki, akcentując panoramę Tatr. Dokumentacja: rzut parteru 1:200, rzut I piętra, elewacje z widokiem na wzgórze, przekroje i pełen pakiet wizualizacji Lumion.",
-      "en": "The massing stretches horizontally along the plot, framing the Tatra panorama. Documentation: ground floor plan 1:200, first floor plan, elevations set against the hillside, sections and full Lumion visualisation package.",
-      "img": "/motel/_img2/elevations_1.jpg"
+      "pl": "Uzupełnieniem założenia jest zagospodarowanie terenu obejmujące parkingi, układ komunikacyjny, strefy wypoczynku oraz zieleń niską i wysoką. Całość tworzy spójną kompozycję, w której architektura i krajobraz wzajemnie się uzupełniają.",
+      "en": "The scheme is completed by site development including parking, circulation, rest areas and low and high greenery. The whole forms a coherent composition in which architecture and landscape complement each other.",
+      "img": "/motel/_img2/views_1.jpg"
     },
     {
       "imgs": [
         "/motel/_img2/views_3.jpg",
+        "/motel/_img2/views_4.jpg",
         "/motel/_img2/details_2.jpg",
         "/motel/_img2/details_3.jpg",
         "/motel/_img2/details_4.jpg",
         "/motel/_img2/details_5.jpg",
         "/motel/_img2/details_6.jpg",
+        "/motel/_img2/elevations_1.jpg",
         "/motel/_img2/elevations_2.jpg",
         "/motel/_img2/elevations_3.jpg",
         "/motel/_img2/sections_3.jpg",

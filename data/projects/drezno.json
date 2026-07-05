@@ -5,8 +5,8 @@
   "category_en": "Residential Architecture",
   "title_pl": "Kompleks Mieszkalny nad Wodą — Drezno",
   "title_en": "Waterfront Residential Complex — Dresden",
-  "subtitle_pl": "Drezno, Niemcy — Projektowanie Zespołu Budynków Mieszkalnych, PK Rok I Sem. II, 2023/24",
-  "subtitle_en": "Dresden, Germany — Residential Complex Design, CUT Year I Sem. II, 2023/24",
+  "subtitle_pl": "Drezno, Niemcy — PK, studia magisterskie, I rok, sem. II (2023/2024) — autorki: Kinga Trojan, Justyna Żak",
+  "subtitle_en": "Dresden, Germany — CUT, master's studies, Year I, Sem. II (2023/24) — authors: Kinga Trojan, Justyna Żak",
   "card_desc_pl": "Zespół budynków mieszkalnych nad wodą w Dreźnie — architektura nadwodna z mariną i zapleczem kulturalnym.",
   "card_desc_en": "Waterfront residential complex in Dresden — architecture above water with a marina and cultural facilities.",
   "tags_pl": "Projekt akademicki, Drezno, Zabudowa śródmiejska, Nabrzeże, Praca zespołowa",
@@ -14,18 +14,18 @@
   "thumb": "/drezno/2.jpg",
   "story": [
     {
-      "pl": "Projekt zespołu budynków mieszkalnych w zabudowie śródmiejskiej Drezna — praca akademicka, Politechnika Krakowska (Rok I, Semestr II, 2023/2024), prowadzący: dr hab. inż. arch. Kinga Racoń-Leja, prof. PK i dr inż. arch. Ernestyna Szpakowska-Loranc. Projekt grupowy: Kinga Trojan, Justyna Żak.",
-      "en": "A residential complex project for an inner-city waterfront site in Dresden — academic work, Cracow University of Technology (Year I, Semester II, 2023/24), supervised by dr hab. inż. arch. Kinga Racoń-Leja, prof. CUT, and dr inż. arch. Ernestyna Szpakowska-Loranc. Group project: Kinga Trojan, Justyna Żak.",
+      "pl": "Projekt zespołu budynków mieszkalnych w zabudowie śródmiejskiej w Dreźnie — Politechnika Krakowska, studia magisterskie, I rok, semestr II (2023/2024). Autorki: Kinga Trojan, Justyna Żak. Projekt zakłada rewitalizację zdegradowanego terenu nadrzecznego poprzez stworzenie zespołu budynków mieszkalnych z funkcjami usługowymi, kulturalnymi i rekreacyjnymi. Celem było przywrócenie tej części miasta mieszkańcom oraz stworzenie atrakcyjnej przestrzeni do życia i integracji.",
+      "en": "A residential complex in the inner-city fabric of Dresden — Cracow University of Technology, master's studies, Year I, Semester II (2023/2024). Authors: Kinga Trojan, Justyna Żak. The project proposes the revitalisation of a degraded riverside area through a complex of residential buildings with service, cultural and recreational functions. The aim was to return this part of the city to its residents and create an attractive space for living and social interaction.",
       "img": "/drezno/1.jpg"
     },
     {
-      "pl": "Główny budynek mieszkalny wykracza poza linię brzegową — dolna kondygnacja wspiera się na słupach wprost nad wodą, umożliwiając cumowanie łodzi bezpośrednio pod budynkiem. Materiały: drewno, biały beton i pełnościenne przeszklenia balkonów eksponujące panoramę rzeki.",
-      "en": "The main residential building extends beyond the shoreline — the lower level rests on pilotis directly above the water, allowing boats to moor beneath the building. Materials: timber, white concrete and full-height glazed balconies framing river panoramas.",
+      "pl": "Centralnym elementem założenia jest budynek mieszkalny częściowo wysunięty nad rzekę, którego parter wsparto na słupach, umożliwiając cumowanie łodzi i dostęp do obiektu zarówno od strony nabrzeża, jak i wody. Parter przeznaczono na usługi, natomiast wyższe kondygnacje mieszczą powtarzalny układ mieszkań, w tym lokale dostosowane do potrzeb osób z niepełnosprawnościami.",
+      "en": "The centrepiece of the scheme is a residential building partly extended over the river, its ground floor raised on columns, allowing boats to moor and giving access to the building from both the embankment and the water. The ground floor is dedicated to services, while the upper storeys contain a repeatable layout of apartments, including units adapted to the needs of people with disabilities.",
       "img": "/drezno/3.jpg"
     },
     {
-      "pl": "Cztery elewacje 1:200 dokumentują logikę kompozycji: rytmiczne podziały balkonów, przeplatanie drewna z białym betonem oraz przeszklone poziomy parterowe otwierające budynek na nabrzeże. Projekt realizowany wspólnie z Justyną Żak.",
-      "en": "Four elevations at 1:200 reveal the compositional logic: rhythmic balcony bays, the interplay of timber and white concrete, and glazed ground-floor levels that open the building to the waterfront. Project realised together with Justyna Żak.",
+      "pl": "Projekt uzupełniają budynki usługowe i kulturalne oraz ogólnodostępne tereny zieleni sprzyjające rekreacji i integracji mieszkańców. Zastosowanie drewna, tynku i dużych przeszkleń podkreśla współczesny charakter architektury oraz jej silny związek z nadrzecznym krajobrazem.",
+      "en": "The scheme is complemented by service and cultural buildings and publicly accessible green areas encouraging recreation and integration among residents. The use of timber, render and large glazing underlines the contemporary character of the architecture and its strong relationship with the riverside landscape.",
       "img": "/drezno/elevations_0.jpg"
     },
     {
